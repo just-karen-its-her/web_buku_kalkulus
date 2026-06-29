@@ -69,6 +69,138 @@ if (searchBtn && searchBox) {
     });
 }
 
+// 1D. Logika Pencarian Materi (Sistem Skoring & Relevansi)
+if (searchInput && searchBox) {
+    let searchResults = document.getElementById('search-results');
+    if (!searchResults) {
+        searchResults = document.createElement('div');
+        searchResults.id = 'search-results';
+        searchBox.appendChild(searchResults);
+    }
+
+    // FUNGSI UNTUK MENGHITUNG SKOR RELEVANSI
+    function hitungSkorRelevansi(data, keyword) {
+        let score = 0;
+
+        // 1. Cek Judul Bab/Materi (Prioritas Tertinggi: Bobot 60%)
+        if (data.material?.title?.toLowerCase().includes(keyword)) {
+            score += 60;
+        }
+
+        // 2. Cek Tujuan Pembelajaran (Prioritas Menengah: Bobot 20%)
+        if (data.tujuan?.title?.toLowerCase().includes(keyword) ||
+            data.tujuan?.content?.toLowerCase().includes(keyword)) {
+            score += 20;
+        }
+
+        // 3. Cek Isi Materi/Teori (Prioritas Menengah: Bobot 25%)
+        if (data.material?.theoryContent) {
+            const textContent = data.material.theoryContent.join(' ').toLowerCase();
+            if (textContent.includes(keyword)) {
+                score += 25;
+            }
+        }
+
+        // 4. Cek Soal Evaluasi/Kuis (Prioritas Rendah: Bobot 15%)
+        if (data.quiz?.questionsList) {
+            // Ubah seluruh kuis jadi teks untuk pencarian cepat
+            const quizText = JSON.stringify(data.quiz.questionsList).toLowerCase();
+            if (quizText.includes(keyword)) {
+                score += 15;
+            }
+        }
+
+        // Maksimal skor adalah 100
+        return Math.min(score, 100);
+    }
+
+    searchInput.addEventListener('input', function (e) {
+        const keyword = e.target.value.toLowerCase().trim();
+        searchResults.innerHTML = ''; // Bersihkan hasil sebelumnya
+
+        if (keyword === '' || !groupDatabase) {
+            searchResults.style.display = 'none';
+            return;
+        }
+
+        let arrayHasil = [];
+
+        // 1. Kumpulkan semua data yang memiliki skor > 0
+        for (const key in groupDatabase) {
+            const data = groupDatabase[key];
+            const groupId = key.split('_')[1];
+
+            const skor = hitungSkorRelevansi(data, keyword);
+
+            if (skor > 0) {
+                arrayHasil.push({
+                    groupId: groupId,
+                    title: data.material?.title || `Materi Kelompok ${groupId}`,
+                    score: skor
+                });
+            }
+        }
+
+        // 2. Urutkan hasil dari skor tertinggi ke terendah (Paling Relevan di atas)
+        arrayHasil.sort((a, b) => b.score - a.score);
+
+        // 3. Tampilkan hasil ke layar
+        if (arrayHasil.length > 0) {
+            searchResults.style.display = 'block';
+
+            arrayHasil.forEach(hasil => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+
+                // Tentukan warna indikator berdasarkan skor
+                let scoreColor = '#4caf50'; // Hijau (Sangat Relevan)
+                if (hasil.score < 50) scoreColor = '#ff9800'; // Orange (Lumayan)
+                if (hasil.score < 25) scoreColor = '#f44336'; // Merah (Kurang Relevan)
+
+                // Render Judul dan Persentase Skor
+                resultItem.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+                        <div>
+                            <i class="fa-solid fa-book"></i> ${hasil.title} 
+                            <span style="font-size: 0.8em; color: #aaa; margin-left:5px;">(Kel. ${hasil.groupId})</span>
+                        </div>
+                        <span style="font-size: 11px; background-color: ${scoreColor}; padding: 2px 6px; border-radius: 4px; font-weight: bold;">
+                            ${hasil.score}%
+                        </span>
+                    </div>
+                `;
+
+                // Aksi klik untuk pindah halaman
+                resultItem.addEventListener('click', function () {
+                    const targetMenuLink = document.getElementById('link-material-examples-' + hasil.groupId);
+                    if (targetMenuLink) targetMenuLink.click();
+
+                    searchInput.value = '';
+                    searchResults.innerHTML = '';
+                    searchResults.style.display = 'none';
+                    searchBox.classList.remove('show');
+
+                    if (window.innerWidth <= 768 && sidebar) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+
+                searchResults.appendChild(resultItem);
+            });
+        } else {
+            // Jika tidak ada skor sama sekali
+            searchResults.style.display = 'block';
+            searchResults.innerHTML = '<div class="search-result-empty">Materi tidak ditemukan. Coba kata kunci lain.</div>';
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!searchBox.contains(e.target)) {
+            searchResults.style.display = 'none';
+        }
+    });
+}
+
 /* =====================================================================
    BAGIAN 2: MENU ACCORDION SIDEBAR
    ===================================================================== */
@@ -881,5 +1013,34 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(materialTextContainer, { childList: true });
     }
 
-    
+
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fontBtn = document.getElementById('font-btn');
+    const body = document.body;
+
+    // Daftar class tema font. 
+    // String kosong '' adalah tema default (:root)
+    const fontThemes = ['', 'font-theme-2', 'font-theme-3'];
+    let currentThemeIndex = 0;
+
+    fontBtn.addEventListener('click', (e) => {
+        // Mencegah halaman melompat ke atas karena href="#"
+        e.preventDefault();
+
+        // Hapus class tema yang sedang aktif (jika ada)
+        if (fontThemes[currentThemeIndex]) {
+            body.classList.remove(fontThemes[currentThemeIndex]);
+        }
+
+        // Pindah ke indeks tema berikutnya, kembali ke 0 jika sudah di akhir
+        currentThemeIndex = (currentThemeIndex + 1) % fontThemes.length;
+
+        // Tambahkan class tema yang baru
+        if (fontThemes[currentThemeIndex]) {
+            body.classList.add(fontThemes[currentThemeIndex]);
+        }
+    });
 });

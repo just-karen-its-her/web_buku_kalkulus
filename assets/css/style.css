@@ -76,6 +76,23 @@
     --transition-slow: margin-left 0.5s ease, transform 0.5s ease;
     --transition-page-flip: 0.8s ease-in-out forwards;
     --scroll-height: 80vh;
+
+
+
+
+    /* TEMA 2: Modern & Clean */
+    body.font-theme-2 {
+        --ui-font: "Inter", "Helvetica Neue", sans-serif;
+        --book-text-font: "Merriweather", "Book Antiqua", serif;
+        --book-heading-font: "Montserrat", "Arial Black", sans-serif;
+    }
+
+    /* TEMA 3: Klasik & Mudah Dibaca */
+    body.font-theme-3 {
+        --ui-font: "Roboto", sans-serif;
+        --book-text-font: "Open Sans", "Arial", sans-serif;
+        --book-heading-font: "Roboto Slab", "Courier New", serif;
+    }
 }
 
 
@@ -98,6 +115,21 @@ body {
     background-color: var(--content-bg);
     font-family: var(--ui-font);
     /* font-size: 10px !important; */
+}
+
+body {
+    font-family: var(--ui-font);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--book-heading-font);
+}
+
+.book-content {
+    font-family: var(--book-text-font);
 }
 
 .hidden {
@@ -171,7 +203,14 @@ body {
     text-transform: uppercase;
 }
 
+/* =========================================================
+   PENGATURAN KOTAK PENCARIAN & HASIL PENCARIAN
+   ========================================================= */
+
 .sidebar-search {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     max-height: 0;
     padding: 0 20px;
     overflow: hidden;
@@ -180,10 +219,106 @@ body {
 }
 
 .sidebar-search.show {
-    max-height: 80px;
+    max-height: 500px;
+    /* KUNCI UTAMA: Buka ruang sampai 500px agar dropdown muat */
     padding: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     opacity: 1;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    color: white;
+    font-size: 13px;
+    transition: border 0.3s ease;
+}
+
+.sidebar-search input:focus {
+    border-color: var(--search-placeholder);
+}
+
+.sidebar-search input::placeholder {
+    color: var(--search-placeholder);
+}
+
+/* Style kotak hasil pencariannya */
+#search-results {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    max-height: 550px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Style item per barisnya */
+.search-result-item {
+    padding: 15px 15px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.4s ease;
+    font-family: var(--book-text-font);
+    font-style: italic;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: var(--sidebar-hover-bg);
+}
+
+.search-result-empty {
+    padding: 12px 15px;
+    color: #ccc;
+    font-size: 13px;
+    text-align: center;
+    font-style: italic;
+}
+
+.sidebar-search {
+
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.sidebar-search.show {
+    /* max-height: 80px; */
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 1;
+}
+
+/* =========================================================
+   MENYEMBUNYIKAN SCROLLBAR PADA HASIL PENCARIAN
+   ========================================================= */
+
+/* Untuk browser Firefox & Edge/IE lama */
+#search-results {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Untuk browser Chrome, Safari, dan Edge modern */
+#search-results::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar-search input {
@@ -308,7 +443,7 @@ body {
 }
 
 .nested-menu li a {
-    font-size: 12px  !important;
+    font-size: 12px !important;
     /* background-color: #0000007e; */
 }
 

@@ -649,7 +649,7 @@
         },
         "videos": [
             {
-                "title": "Penjelasan Contoh Soal Bentuk Video",
+                "title": "-",
                 "description": "-",
                 "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
             }
@@ -657,12 +657,7 @@
         "catatan": {
             "title": "Catatan Singkat Video",
             "content": [
-                "<p>Dalam menyelesaikan soal <strong>Aplikasi Turunan dan Optimisasi</strong>, sering kali terjadi kesalahan teknis pada beberapa tahap perhitungan. Harap perhatikan hal-hal berikut sebelum ujian:</p>",
-                "<ul>",
-                "<li><strong>Hati-hati dengan Batasan Masalah (Domain):</strong> Pada soal kontekstual (seperti jumlah barang, waktu, atau pekerja), nilai stasioner \\( x \\) <strong>tidak boleh negatif</strong>. Jika Anda mendapatkan hasil minus untuk jumlah barang, berarti perhitungan tersebut secara konteks dunia nyata tidak valid.</li>",
-                "<li><strong>Wajib Melakukan Uji Turunan Kedua:</strong> Syarat \\( f'(x) = 0 \\) hanya menemukan titik stasioner, bukan memastikan bahwa titik tersebut pasti maksimum atau minimum. Bisa jadi titik tersebut adalah <em>titik belok</em>. Selalu buktikan jenis titik menggunakan perhitungan turunan kedua \\( f''(x) \\).</li>",
-                "<li><strong>Awas Tertukar Saat Substitusi:</strong> Kesalahan fatal yang paling umum terjadi adalah mensubstitusikan nilai \\( x \\) stasioner ke dalam persamaan <em>turunan pertama</em>. Ingat, untuk mencari nilai maksimum/minimum, substitusikan \\( x \\) kembali ke <strong>fungsi awal \\( f(x) \\)</strong>.</li>",
-                "</ul>"
+                "<p>-</p>"
             ]
         },
         "quiz": {
