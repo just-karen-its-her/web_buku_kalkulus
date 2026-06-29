@@ -19,15 +19,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 /* =========================================================
    1. VARIABEL AKAR & WARNA (ROOT VARIABLES)
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Bagian ini menyimpan semua variabel dasar seperti warna tema, ukuran font,
-   shadow, dan animasi. Jika Anda ingin mengubah warna utama website atau
-   font, cukup ubah nilai di dalam blok :root ini. */
 :root {
+    /* --- VARIABEL ASLI --- */
     --ui-font: "Poppins", sans-serif;
     --book-text-font: 'Lora', 'Garamond', 'Georgia', serif;
     --book-heading-font: 'Playfair Display', 'Times New Roman', serif;
@@ -77,31 +73,83 @@
     --transition-page-flip: 0.8s ease-in-out forwards;
     --scroll-height: 80vh;
 
+    /* --- TAMBAHAN ROOT BARU (Hasil Ekstraksi Hardcoded Colors) --- */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-red: red;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
 
+    --color-gray-ccc: #ccc;
+    --color-gray-ddd: #ddd;
+    --color-gray-e0e0e0: #e0e0e0;
+    --color-gray-eaeaea: #eaeaea;
+    --color-gray-f0f0f0: #f0f0f0;
+    --color-gray-e5e7eb: #e5e7eb;
+    --color-gray-888: #888;
+    --color-gray-666: #666;
+    --color-gray-555: #555;
+    --color-gray-333: #333;
 
+    --color-section-title: #a4bccc;
+    --color-menu-nested: #b0c4d6;
+    --color-icon-empty: #b0c4de;
+    --btn-hover-dark: #1a334a;
 
-    /* TEMA 2: Modern & Clean */
-    body.font-theme-2 {
-        --ui-font: "Inter", "Helvetica Neue", sans-serif;
-        --book-text-font: "Merriweather", "Book Antiqua", serif;
-        --book-heading-font: "Montserrat", "Arial Black", sans-serif;
-    }
+    --bg-dark-02: rgba(0, 0, 0, 0.02);
+    --bg-dark-15: rgba(0, 0, 0, 0.15);
 
-    /* TEMA 3: Klasik & Mudah Dibaca */
-    body.font-theme-3 {
-        --ui-font: "Roboto", sans-serif;
-        --book-text-font: "Open Sans", "Arial", sans-serif;
-        --book-heading-font: "Roboto Slab", "Courier New", serif;
-    }
+    --bg-light-f8f9fa: #f8f9fa;
+    --bg-hover-eef2f5: #eef2f5;
+    --bg-table-desk: #e2e8f0;
+    --bg-desk-center: #ffffff;
+    --bg-desk-edge: #cbd5e1;
+    --bg-book-spread: rgba(0, 0, 0, 0.075);
+    --bg-book-page: #fdfcf9;
+
+    --border-light-05: rgba(255, 255, 255, 0.05);
+    --border-light-08: rgba(255, 255, 255, 0.08);
+    --border-light-10: rgba(255, 255, 255, 0.1);
+    --border-light-15: rgba(255, 255, 255, 0.15);
+
+    --shadow-color-02: rgba(0, 0, 0, 0.02);
+    --shadow-color-05: rgba(0, 0, 0, 0.05);
+    --shadow-color-08: rgba(0, 0, 0, 0.08);
+    --shadow-color-10: rgba(0, 0, 0, 0.1);
+    --shadow-color-15: rgba(0, 0, 0, 0.15);
+    --shadow-color-20: rgba(0, 0, 0, 0.2);
+    --shadow-color-30: rgba(0, 0, 0, 0.3);
+    --shadow-color-50: rgba(0, 0, 0, 0.5);
+
+    --scrollbar-bg-20: rgba(255, 255, 255, 0.2);
+    --scrollbar-bg-40: rgba(255, 255, 255, 0.4);
+
+    --scrollbar-color-50: rgba(123, 148, 168, 0.5);
+    --scrollbar-color-60: rgba(123, 148, 168, 0.6);
+    --scrollbar-color-80: rgba(123, 148, 168, 0.8);
+    --scrollbar-color-90: rgba(123, 148, 168, 0.9);
+
+    --page-edge-1: #94a3b8;
+    --page-edge-2: #64748b;
 }
 
+/* TEMA 2: Modern & Clean */
+body.font-theme-2 {
+    --ui-font: "Inter", "Helvetica Neue", sans-serif;
+    --book-text-font: "Merriweather", "Book Antiqua", serif;
+    --book-heading-font: "Montserrat", "Arial Black", sans-serif;
+}
+
+/* TEMA 3: Klasik & Mudah Dibaca */
+body.font-theme-3 {
+    --ui-font: "Roboto", sans-serif;
+    --book-text-font: "Open Sans", "Arial", sans-serif;
+    --book-heading-font: "Roboto Slab", "Courier New", serif;
+}
 
 /* =========================================================
    2. PENGATURAN DASAR (BODY SETTINGS & RESET)
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Me-reset margin dan padding bawaan browser agar seragam.
-   Juga mengatur tata letak utama body website agar memenuhi tinggi layar (100vh). */
 * {
     margin: 0;
     padding: 0;
@@ -113,11 +161,6 @@ body {
     height: 100vh;
     overflow: hidden;
     background-color: var(--content-bg);
-    font-family: var(--ui-font);
-    /* font-size: 10px !important; */
-}
-
-body {
     font-family: var(--ui-font);
 }
 
@@ -136,13 +179,9 @@ h4 {
     display: none !important;
 }
 
-
 /* =========================================================
    3. DESAIN SIDEBAR & NAVIGASI KIRI
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Mengatur tampilan menu di sebelah kiri, termasuk logo, kotak pencarian,
-   daftar menu bab/sub-bab, dan kustomisasi scrollbar khusus untuk sidebar. */
 .sidebar {
     position: relative;
     z-index: 20;
@@ -153,8 +192,8 @@ h4 {
     margin-left: calc(-1 * var(--sidebar-width));
     background-color: var(--sidebar-bg);
     border-right: 1px solid var(--sidebar-border);
-    color: white;
-    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    color: var(--color-white);
+    box-shadow: 2px 0 15px var(--shadow-color-10);
     transition: margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -175,10 +214,10 @@ h4 {
     width: 110px;
     height: 110px;
     overflow: hidden;
-    background-color: white;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-white);
+    border: 3px solid var(--border-light-10);
+    border-radius: var(--radius-circle);
+    box-shadow: 0 4px 15px var(--shadow-color-20);
 }
 
 .logo-circle img {
@@ -190,7 +229,7 @@ h4 {
 .sidebar-heading {
     margin: 0 20px 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-light-08);
     text-align: center;
     color: var(--sidebar-text);
     font-family: var(--book-heading-font);
@@ -203,10 +242,7 @@ h4 {
     text-transform: uppercase;
 }
 
-/* =========================================================
-   PENGATURAN KOTAK PENCARIAN & HASIL PENCARIAN
-   ========================================================= */
-
+/* PENGATURAN KOTAK PENCARIAN & HASIL PENCARIAN */
 .sidebar-search {
     display: flex;
     flex-direction: column;
@@ -220,20 +256,19 @@ h4 {
 
 .sidebar-search.show {
     max-height: 500px;
-    /* KUNCI UTAMA: Buka ruang sampai 500px agar dropdown muat */
     padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-light-05);
     opacity: 1;
 }
 
 .sidebar-search input {
     width: 100%;
     padding: 12px 15px;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--bg-dark-15);
     border: 1px solid transparent;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     outline: none;
-    color: white;
+    color: var(--color-white);
     font-size: 13px;
     transition: border 0.3s ease;
 }
@@ -246,26 +281,33 @@ h4 {
     color: var(--search-placeholder);
 }
 
-/* Style kotak hasil pencariannya */
 #search-results {
     position: relative;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 15px;
-    background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
+    background-color: var(--bg-dark-15);
+    border-radius: var(--radius-md);
     max-height: 550px;
     overflow-y: auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light-10);
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
-/* Style item per barisnya */
+#search-results::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
 .search-result-item {
     padding: 15px 15px;
-    color: #ffffff;
+    color: var(--color-white);
     cursor: pointer;
     font-size: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-light-05);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -284,61 +326,10 @@ h4 {
 
 .search-result-empty {
     padding: 12px 15px;
-    color: #ccc;
+    color: var(--color-gray-ccc);
     font-size: 13px;
     text-align: center;
     font-style: italic;
-}
-
-.sidebar-search {
-
-    max-height: 0;
-    padding: 0 20px;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.4s ease;
-}
-
-.sidebar-search.show {
-    /* max-height: 80px; */
-    padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    opacity: 1;
-}
-
-/* =========================================================
-   MENYEMBUNYIKAN SCROLLBAR PADA HASIL PENCARIAN
-   ========================================================= */
-
-/* Untuk browser Firefox & Edge/IE lama */
-#search-results {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-/* Untuk browser Chrome, Safari, dan Edge modern */
-#search-results::-webkit-scrollbar {
-    display: none;
-}
-
-.sidebar-search input {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: rgba(0, 0, 0, 0.15);
-    border: 1px solid transparent;
-    border-radius: 6px;
-    outline: none;
-    color: white;
-    font-size: 13px;
-    transition: border 0.3s ease;
-}
-
-.sidebar-search input:focus {
-    border-color: var(--search-placeholder);
-}
-
-.sidebar-search input::placeholder {
-    color: var(--search-placeholder);
 }
 
 .sidebar-nav {
@@ -360,7 +351,7 @@ h4 {
 .sidebar-nav li.section-title {
     margin: 10px 0;
     padding: 5px 10px;
-    color: #a4bccc;
+    color: var(--color-section-title);
     font-size: 12px;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -368,7 +359,7 @@ h4 {
 }
 
 .sidebar-nav li.section-title strong {
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .sidebar-nav a {
@@ -376,7 +367,7 @@ h4 {
     align-items: center;
     padding: 10px 14px;
     background-color: transparent;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     color: var(--sidebar-text);
     font-size: 13px;
     text-decoration: none;
@@ -392,11 +383,11 @@ h4 {
 .sidebar-nav a.active {
     background-color: var(--sidebar-active-bg);
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px var(--shadow-color-15);
 }
 
 .sidebar-nav a.sub-menu-active {
-    color: #ffffff;
+    color: var(--color-white);
     font-weight: 400;
     text-transform: capitalize;
 }
@@ -419,7 +410,7 @@ h4 {
     margin: 4px 0 8px 20px;
     padding-left: 10px;
     overflow: hidden;
-    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    border-left: 2px solid var(--border-light-15);
     opacity: 1;
     font-weight: bold;
     text-transform: capitalize;
@@ -437,14 +428,13 @@ h4 {
 
 .sidebar-nav .nested-menu a {
     padding: 8px 12px;
-    color: #b0c4d6;
+    color: var(--color-menu-nested);
     font-size: 12px;
     letter-spacing: 1px;
 }
 
 .nested-menu li a {
     font-size: 12px !important;
-    /* background-color: #0000007e; */
 }
 
 .caret-icon {
@@ -468,22 +458,17 @@ h4 {
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--scrollbar-bg-20);
     border-radius: 10px;
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--scrollbar-bg-40);
 }
-
 
 /* =========================================================
    4. NAVBAR ATAS & BACKGROUND MEJA BUKU
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Mengatur wrapper utama di luar sidebar, bilah navigasi di bagian atas 
-   (top-navbar), serta warna latar belakang abu-abu yang berfungsi seperti "meja"
-   tempat buku diletakkan (.content-body). */
 .main-wrapper {
     position: relative;
     display: flex;
@@ -539,8 +524,8 @@ h4 {
     flex: 1;
     padding: 0;
     overflow-y: auto;
-    background-color: #e2e8f0;
-    background-image: radial-gradient(circle at center, #ffffff 0%, #cbd5e1 100%);
+    background-color: var(--bg-table-desk);
+    background-image: radial-gradient(circle at center, var(--bg-desk-center) 0%, var(--bg-desk-edge) 100%);
 }
 
 .view-container {
@@ -551,21 +536,16 @@ h4 {
     width: 100%;
 }
 
-
 /* =========================================================
    5. STRUKTUR FISIK BUKU TERBUKA
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Mengatur bentuk elemen HTML agar menyerupai dua halaman buku yang sedang terbuka 
-   (kiri dan kanan), termasuk efek bayangan tulang buku (spine) di tengah. */
 .book-spread {
     position: relative;
     display: flex;
     width: 100%;
     max-width: 2000px;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.075);
-    /* ekuivalen #00000013 */
+    background-color: var(--bg-book-spread);
     border-radius: 5px;
     box-shadow: var(--shadow-book-open);
     perspective: 2500px;
@@ -578,8 +558,8 @@ h4 {
     flex: 1 1 50%;
     max-width: 50%;
     height: 100vh;
-    background-color: #fdfcf9;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+    background-color: var(--bg-book-page);
+    box-shadow: inset 0 0 20px var(--shadow-color-02);
 }
 
 .book-page:first-of-type,
@@ -599,17 +579,13 @@ h4 {
 .book-spine {
     z-index: 2;
     width: 2px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.02));
-    box-shadow: -3px 0 18px rgba(0, 0, 0, 0.20), 3px 0 18px rgba(0, 0, 0, 0.20);
+    background: linear-gradient(to right, var(--shadow-color-02), var(--shadow-color-08), var(--shadow-color-02));
+    box-shadow: -3px 0 18px var(--shadow-color-20), 3px 0 18px var(--shadow-color-20);
 }
-
 
 /* =========================================================
    6. DESAIN HALAMAN SAMPUL (COVER)
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Fokus pada styling halaman paling depan dari buku, seperti letak logo,
-   judul program studi (prodi), gambar cover, dan kutipan. */
 #view-cover {
     justify-content: center;
     min-height: calc(100vh - 120px);
@@ -705,13 +681,9 @@ h4 {
     font-size: 13px;
 }
 
-
 /* =========================================================
-   7. TEKS BUKU, KOMPONEN & AREA SCROLL (TERMASUK JS INJECT)
+   7. TEKS BUKU, KOMPONEN & AREA SCROLL
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Mengatur gaya tulisan bab, sub-bab, iframe video Youtube, profil tim penyusun,
-   serta area khusus agar isi konten (teks yang panjang) bisa di-scroll secara mandiri. */
 .chapter-title {
     margin-top: 0;
     margin-bottom: 15px;
@@ -753,7 +725,7 @@ h4 {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--border-gray-eaeaea);
     transition: opacity 0.2s ease;
 }
 
@@ -772,8 +744,8 @@ h4 {
     height: 100px;
     margin: 15px 20px 15px 0;
     overflow: hidden;
-    background-color: #f8f9fa;
-    border: 1px solid #f0f0f0;
+    background-color: var(--bg-light-f8f9fa);
+    border: 1px solid var(--border-gray-f0f0f0);
     border-radius: 8px;
 }
 
@@ -823,7 +795,7 @@ h4 {
     padding-bottom: 56.25%;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--shadow-color-10);
 }
 
 .video-responsive iframe {
@@ -834,11 +806,9 @@ h4 {
     height: 100%;
 }
 
-/* --- Styling Khusus untuk List Video --- */
 .video-item {
     margin-bottom: 25px;
-    background: var(--card-bg), #000;
-    /* Menggunakan variabel warna, fallback ke putih */
+    background: var(--card-bg), var(--color-black);
     padding: 15px;
     border-radius: 10px;
 }
@@ -850,11 +820,10 @@ h4 {
 }
 
 .video-title-icon {
-    color: red;
+    color: var(--color-red);
     margin-right: 8px;
 }
 
-/* Memastikan video responsif (aspek rasio 16:9) di HP maupun Laptop */
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -882,7 +851,7 @@ h4 {
 }
 
 .page-content-scroll:hover {
-    scrollbar-color: rgba(123, 148, 168, 0.6) transparent;
+    scrollbar-color: var(--scrollbar-color-60) transparent;
 }
 
 .page-content-scroll::-webkit-scrollbar {
@@ -897,20 +866,16 @@ h4 {
 }
 
 .page-content-scroll:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(123, 148, 168, 0.5);
+    background-color: var(--scrollbar-color-50);
 }
 
 .page-content-scroll:hover::-webkit-scrollbar-thumb:active {
-    background-color: rgba(123, 148, 168, 0.9);
+    background-color: var(--scrollbar-color-90);
 }
-
 
 /* =========================================================
    8. HALAMAN KATA PENGANTAR & PANDUAN
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Digunakan khusus untuk tata letak halaman prakata, tanggal, nama penulis,
-   serta list panduan penggunaan buku. */
 .page-layout-column {
     display: flex;
     flex-direction: column;
@@ -975,18 +940,14 @@ h4 {
     line-height: 1.6;
 }
 
-
 /* =========================================================
    9. ANIMASI 3D MEMBALIK KERTAS & TOMBOL
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Mendefinisikan tombol "Next/Prev" serta animasi CSS (keyframes)
-   saat halaman buku membalik ke kanan atau ke kiri. */
 .btn-page {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--sidebar-bg);
-    color: white;
+    color: var(--color-white);
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -1017,9 +978,9 @@ h4 {
     }
 
     40% {
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02),
-            -1px 0 0 #fdfcf9, -2px 0 0 #e2e8f0, -3px 0 0 #cbd5e1, -4px 0 0 #94a3b8, -5px 0 0 #64748b,
-            40px 20px 50px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 20px var(--shadow-color-02),
+            -1px 0 0 var(--bg-book-page), -2px 0 0 var(--bg-table-desk), -3px 0 0 var(--bg-desk-edge), -4px 0 0 var(--page-edge-1), -5px 0 0 var(--page-edge-2),
+            40px 20px 50px var(--shadow-color-30);
         opacity: 1;
     }
 
@@ -1046,9 +1007,9 @@ h4 {
     }
 
     40% {
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02),
-            1px 0 0 #fdfcf9, 2px 0 0 #e2e8f0, 3px 0 0 #cbd5e1, 4px 0 0 #94a3b8, 5px 0 0 #64748b,
-            -40px 20px 50px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 20px var(--shadow-color-02),
+            1px 0 0 var(--bg-book-page), 2px 0 0 var(--bg-table-desk), 3px 0 0 var(--bg-desk-edge), 4px 0 0 var(--page-edge-1), 5px 0 0 var(--page-edge-2),
+            -40px 20px 50px var(--shadow-color-30);
         opacity: 1;
     }
 
@@ -1062,13 +1023,9 @@ h4 {
     }
 }
 
-
 /* =====================================================================
    10. STYLING CONTOH SOAL & PEMBAHASAN
    ===================================================================== */
-/* 💡 PENJELASAN: 
-   Merupakan kotak/box yang membedakan teks biasa dengan teks contoh soal.
-   Diberikan margin juga untuk komponen matematika (MathJax/mjx-container). */
 .example-box {
     margin-bottom: 20px;
     overflow: hidden;
@@ -1077,13 +1034,13 @@ h4 {
 
 .example-box-header {
     padding: 15px;
-    color: #333;
+    color: var(--color-gray-333);
     font-size: 1.05em;
 }
 
 .example-box-body {
     padding: 10px;
-    color: #555;
+    color: var(--color-gray-555);
     line-height: 1.8;
 }
 
@@ -1093,16 +1050,12 @@ h4 {
     margin-bottom: 10px !important;
 }
 
-
 /* =====================================================================
    11. STYLING KUIS & HASIL KUIS
    ===================================================================== */
-/* 💡 PENJELASAN: 
-   Mengatur format soal pilihan ganda, tombol navigasi soal,
-   serta kotak hasil (hijau jika benar, merah jika salah) dan penjelasan. */
 .quiz-question {
     margin-top: 30px;
-    background-color: #ffffff;
+    background-color: var(--color-white);
 }
 
 .quiz-question p {
@@ -1116,8 +1069,8 @@ h4 {
     display: block;
     margin-bottom: 10px;
     padding: 10px 15px;
-    background-color: #f8f9fa;
-    border: 1px solid #eaeaea;
+    background-color: var(--bg-light-f8f9fa);
+    border: 1px solid var(--border-gray-eaeaea);
     border-radius: 4px;
     font-family: var(--book-text-font);
     font-size: 14px;
@@ -1126,7 +1079,7 @@ h4 {
 }
 
 .quiz-option:hover {
-    background-color: #eef2f5;
+    background-color: var(--bg-hover-eef2f5);
 }
 
 .quiz-option input {
@@ -1136,21 +1089,19 @@ h4 {
 .quiz-question-single {
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed var(--border-gray-ccc);
 }
 
 .quiz-progress-text {
     margin-bottom: 10px;
-    color: #666;
+    color: var(--color-gray-666);
     font-size: 0.9em;
 }
 
 #quiz-container {
     position: relative;
     min-height: 855px;
-    /* Rata-rata panjang soal */
     padding-bottom: 60px;
-    /* Ruang agar teks tidak tertutup tombol */
 }
 
 .quiz-nav-container {
@@ -1170,18 +1121,18 @@ h4 {
     width: 45px;
     height: 45px;
     padding: 0;
-    background-color: #2b4e6d;
-    color: white;
+    background-color: var(--sidebar-bg);
+    color: var(--color-white);
     font-size: 1.2rem;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--shadow-color-10);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .quiz-nav-btn:hover {
-    background-color: #1a334a;
+    background-color: var(--btn-hover-dark);
     transform: translateY(-2px);
 }
 
@@ -1202,11 +1153,11 @@ h4 {
 }
 
 .result-box.correct {
-    border-color: #28a745;
+    border-color: var(--color-success);
 }
 
 .result-box.incorrect {
-    border-color: #dc3545;
+    border-color: var(--color-danger);
 }
 
 .result-text {
@@ -1214,11 +1165,11 @@ h4 {
 }
 
 .result-status.correct {
-    color: #28a745;
+    color: var(--color-success);
 }
 
 .result-status.incorrect {
-    color: #dc3545;
+    color: var(--color-danger);
 }
 
 .result-detail {
@@ -1231,13 +1182,9 @@ h4 {
     font-size: 1em;
 }
 
-
 /* =========================================================
    12. CSS TIDAK TERPAKAI (UNUSED CSS)
    ========================================================= */
-/* 💡 PENJELASAN: 
-   Class yang saat ini tidak dipanggil di HTML, namun tetap disimpan
-   sebagai cadangan (legacy/backup). */
 .cover-main-title {
     margin-top: 0;
     margin-bottom: 5px;
@@ -1277,7 +1224,7 @@ h4 {
     width: 30px;
     height: 1px;
     margin-bottom: 15px;
-    background-color: #ccc;
+    background-color: var(--color-gray-ccc);
 }
 
 .cover-year {
@@ -1286,13 +1233,9 @@ h4 {
     letter-spacing: 4px;
 }
 
-
 /* =====================================================================
-   13. ORNAMEN & TATA LETAK TAMBAHAN (KALKULATOR & KERTAS BUKU TULIS)
+   13. ORNAMEN & TATA LETAK TAMBAHAN
    ===================================================================== */
-/* 💡 PENJELASAN: 
-   Mengatur layout jika Anda menanamkan iframe eksternal (seperti kalkulator) 
-   dan membuat ornamen garis horizontal seperti kertas buku tulis bergaris. */
 .calc-desc-text {
     margin-bottom: 15px;
 }
@@ -1303,9 +1246,8 @@ h4 {
     padding-left: 0 !important;
     padding-right: 0 !important;
     overflow-y: auto;
-    /* overflow-y: hidden; <-- Jangan diaktifkan jika ingin isinya bisa di-scroll */
     scrollbar-width: thin;
-    scrollbar-color: rgba(123, 148, 168, 0.5) transparent;
+    scrollbar-color: var(--scrollbar-color-50) transparent;
 }
 
 .calculator-container::-webkit-scrollbar {
@@ -1313,30 +1255,28 @@ h4 {
 }
 
 .calculator-container::-webkit-scrollbar-thumb {
-    background-color: rgba(123, 148, 168, 0.5);
+    background-color: var(--scrollbar-color-50);
     background-clip: padding-box;
     border: 2px solid transparent;
     border-radius: 10px;
 }
 
 .calculator-container:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(123, 148, 168, 0.8);
+    background-color: var(--scrollbar-color-80);
 }
 
 .calc-iframe {
     width: 100%;
     height: 100%;
-    background-color: #f8f9fa;
+    background-color: var(--bg-light-f8f9fa);
     border: none;
-    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 4px 10px var(--shadow-color-05);
     transition: opacity 0.3s ease;
     scrollbar-width: none;
-    /* Untuk Firefox */
 }
 
 .calc-iframe::-webkit-scrollbar {
     display: none;
-    /* Untuk Chrome, Safari, Edge */
 }
 
 .calc-left-layout {
@@ -1351,16 +1291,16 @@ h4 {
     width: 100%;
     height: 100%;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.02);
-    color: #888;
+    background-color: var(--bg-dark-02);
+    color: var(--color-gray-888);
     text-align: center;
-    border: 2px dashed #ccc;
+    border: 2px dashed var(--border-gray-ccc);
     border-radius: 12px;
 }
 
 .calc-empty-box i {
     margin-bottom: 15px;
-    color: #b0c4de;
+    color: var(--color-icon-empty);
 }
 
 .calc-empty-box p {
@@ -1369,32 +1309,24 @@ h4 {
     line-height: 1.5;
 }
 
-/* Ornamen Garis Kertas Buku Tulis (Halaman Kanan) */
 .lined-paper-container hr {
     margin-top: 30px;
     border: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-gray-e0e0e0);
 }
 
 .lined-paper-container hr:first-of-type {
     margin-top: 40px;
 }
 
-
 /* =====================================================================
-   14. STYLING OTOMATIS UNTUK KONTEN MATERI (DARI JSON)
+   14. STYLING OTOMATIS UNTUK KONTEN MATERI
    ===================================================================== */
-/* 💡 PENJELASAN: 
-   Merupakan format untuk tag-tag standar HTML (h2, h3, h4, p, ul, li, table) 
-   yang dihasilkan saat Anda memuat konten/materi secara dinamis dari file JSON 
-   atau database. Ini memastikan konten tulisan selalu rapi. */
-
-/* Judul Utama Halaman Buku */
 .chapter-title,
 .section-subtitle {
     min-height: 60px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid var(--border-gray-f0f0f0);
     font-family: var(--book-heading-font);
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -1403,7 +1335,7 @@ h4 {
 .chapter-title {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #000;
+    color: var(--color-black);
     font-size: 17px;
     text-transform: capitalize;
 }
@@ -1415,7 +1347,6 @@ h4 {
     text-align: center;
 }
 
-/* Sub-Judul di Halaman Kanan */
 .section-subtitle {
     margin-top: 0;
     margin-bottom: 20px;
@@ -1423,7 +1354,6 @@ h4 {
     font-size: 17px;
 }
 
-/* Judul Sub-Bab di dalam Konten */
 #material-text h2 {
     margin-left: 0;
     margin-top: 0px;
@@ -1474,7 +1404,6 @@ h4 {
     margin-top: 5px;
 }
 
-/* Pengaturan Paragraf */
 #material-text p,
 #examples-container p,
 #catatan-container p,
@@ -1488,10 +1417,8 @@ h4 {
     font-size: 14px;
     line-height: 1.5;
     text-align: justify;
-    /* text-indent: 0.8rem; */
 }
 
-/* Pengaturan List/Daftar Poin */
 #material-text ul,
 #catatan-container ul {
     margin-top: 5px;
@@ -1499,16 +1426,7 @@ h4 {
     margin-left: 40px;
     font-size: 14px;
     line-height: 1.8;
-    list-style-type: circle;
-}
-
-#material-text ul {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 40px;
-    font-size: 14px;
-    line-height: 1.8;
-    list-style-type: decimal;
+    list-style-type: disc;
 }
 
 #material-text ol {
@@ -1517,16 +1435,6 @@ h4 {
     margin-left: 50px;
     font-size: 14px;
     line-height: 1.8;
-    /* list-style-type: circle; */
-}
-
-#material-text ul {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 40px;
-    font-size: 14px;
-    line-height: 1.8;
-    list-style-type: disc;
 }
 
 #tujuan-content ul {
@@ -1551,7 +1459,6 @@ h4 {
     margin-bottom: 15px;
     margin-left: 20px;
     line-height: 1.8;
-    /* list-style-type: circle; */
 }
 
 #examples-container li {
@@ -1577,22 +1484,20 @@ h4 {
     list-style-type: disc;
 }
 
-/* Pengaturan Teks Tebal di dalam List */
 #material-text li strong,
 #catatan-container li strong {
     margin-left: 0;
-    color: #333;
+    color: var(--color-gray-333);
     font-weight: 600;
 }
 
-/* Styling Tabel Materi */
 #examples-container table,
 #material-text table,
 #quiz-container table {
     width: 100%;
     margin-bottom: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: var(--color-white);
+    border: 1px solid var(--border-gray-ddd);
     border-collapse: collapse;
     font-size: 12px;
 }
@@ -1601,9 +1506,9 @@ h4 {
 #material-text th,
 #quiz-container th {
     padding: 12px;
-    background-color: #f8f9fa;
+    background-color: var(--bg-light-f8f9fa);
     color: var(--text-primary);
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-gray-ddd);
     font-family: var(--book-heading-font);
     text-align: center;
 }
@@ -1612,7 +1517,7 @@ h4 {
 #material-text td,
 #quiz-container td {
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-gray-ddd);
     font-family: var(--book-text-font);
     line-height: 1.6;
     text-align: justify;
@@ -1624,7 +1529,6 @@ h4 {
     margin-bottom: 15px;
     margin-left: 20px;
     line-height: 1.8;
-    /* list-style-type: circle; */
 }
 
 #quiz-container li {
@@ -1638,35 +1542,27 @@ h4 {
 }
 
 .result-explanation strong {
-    color: #000;
+    color: var(--color-black);
 }
 
-/* Styling Khusus Grafik Fungsi */
 .grafik-container {
     width: 100%;
     max-width: 1000px;
     margin: 30px auto 20px auto;
-    /* Memberi jarak agar tidak menempel dengan teks */
 }
 
 .tempat-grafik {
     width: 100%;
     max-width: 580px;
-    /* Dibuat lebih lebar */
     margin: 20px auto;
     padding: 20px;
     border-radius: 12px;
-    /* Sudut tumpul */
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border-gray-e5e7eb);
 }
 
 /* =====================================================================
    15. KUMPULAN MEDIA QUERIES (RESPONSIVE DESIGN)
    ===================================================================== */
-/* 💡 PENJELASAN: 
-   Merubah bentuk website saat diakses di perangkat yang lebih kecil (Tablet & HP). 
-   Misalnya merubah dua halaman buku menjadi satu kolom memanjang ke bawah. */
-
 /* --- 1. LAYAR BESAR & LAPTOP KECIL (Maksimal 1200px) --- */
 @media (max-width: 1200px) {
     :root {
@@ -1704,7 +1600,7 @@ h4 {
         min-height: auto;
         margin-bottom: 20px;
         border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px var(--shadow-color-10);
     }
 
     .book-spine {
@@ -1723,14 +1619,14 @@ h4 {
         left: 0;
         z-index: 1000;
         height: 100vh;
-        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 0 25px var(--shadow-color-50);
     }
 
     .top-navbar {
         position: sticky;
         top: 0;
         transform: translateY(0);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 10px var(--shadow-color-05);
     }
 
     .content-body {
