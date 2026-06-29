@@ -17,7 +17,7 @@
    15. MEDIA QUERIES (RESPONSIVE DESIGN)
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Playwrite+AU+TAS:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* =========================================================
    1. VARIABEL AKAR & WARNA (ROOT VARIABLES)
@@ -145,6 +145,76 @@ body.font-theme-3 {
     --ui-font: "Roboto", sans-serif;
     --book-text-font: "Open Sans", "Arial", sans-serif;
     --book-heading-font: "Roboto Slab", "Courier New", serif;
+}
+
+/* TEMA 4: Akademik Modern (Fokus pada Presisi) */
+body.font-theme-4 {
+    --ui-font: system-ui, -apple-system, sans-serif;
+    --book-text-font: "Georgia", "Times New Roman", serif;
+    --book-heading-font: "Lato", "Arial", sans-serif;
+}
+
+/* TEMA 5: Jurnal Ilmiah (Elegan & Formal) */
+body.font-theme-5 {
+    --ui-font: "Segoe UI", Tahoma, sans-serif;
+    --book-text-font: "Crimson Text", "EB Garamond", serif;
+    --book-heading-font: "Raleway", sans-serif;
+}
+
+/* TEMA 6: Minimalis Teknis (Sangat Bersih & Tajam) */
+body.font-theme-6 {
+    --ui-font: "Fira Sans", sans-serif;
+    --book-text-font: "Source Serif Pro", "Charter", serif;
+    --book-heading-font: "Source Sans Pro", sans-serif;
+}
+
+/* TEMA 7: Kontemporer Segar (Nyaman di Layar Gadget) */
+body.font-theme-7 {
+    --ui-font: "Nunito", sans-serif;
+    --book-text-font: "Lora", "Baskerville", serif;
+    --book-heading-font: "Poppins", sans-serif;
+}
+
+/* TEMA 8: Klasik Universitas (Gaya Buku Teks Formal) */
+body.font-theme-8 {
+    --ui-font: "Arial", sans-serif;
+    --book-text-font: "EB Garamond", "Garamond", serif;
+    --book-heading-font: "Playfair Display", serif;
+}
+
+/* TEMA 9: Ramah Digital (Sangat Bagus untuk Rendering Monitor Rendah) */
+body.font-theme-9 {
+    --ui-font: "Ubuntu", sans-serif;
+    --book-text-font: "PT Serif", serif;
+    --book-heading-font: "Oswald", sans-serif;
+}
+
+/* TEMA 10: Geometris & Kokoh (Bagus untuk Struktur Rumus) */
+body.font-theme-10 {
+    --ui-font: "Avenir", "Helvetica", sans-serif;
+    --book-text-font: "Bitter", serif;
+    --book-heading-font: "Cabin", sans-serif;
+}
+
+/* TEMA 11: Ketajaman Maksimal (Konsistensi Simbol Global) */
+body.font-theme-11 {
+    --ui-font: "Noto Sans", sans-serif;
+    --book-text-font: "Noto Serif", serif;
+    --book-heading-font: "Noto Sans Display", sans-serif;
+}
+
+/* TEMA 12: Premium Textbook (Gaya Penerbit Internasional) */
+body.font-theme-12 {
+    --ui-font: "Aptos", "Calibri", sans-serif;
+    --book-text-font: "Charter", "Bitstream Charter", serif;
+    --book-heading-font: "Manrope", sans-serif;
+}
+
+/* TEMA 13: Edukasi Interaktif (Modern & Bersahabat) */
+body.font-theme-13 {
+    --ui-font: "Public Sans", sans-serif;
+    --book-text-font: "Merriweather", serif;
+    --book-heading-font: "Plus Jakarta Sans", sans-serif;
 }
 
 /* =========================================================
@@ -726,7 +796,7 @@ h4 {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-gray-eaeaea);
+    border-bottom: 1px solid #eaeaea;
     transition: opacity 0.2s ease;
 }
 
@@ -746,7 +816,7 @@ h4 {
     margin: 15px 20px 15px 0;
     overflow: hidden;
     background-color: var(--bg-light-f8f9fa);
-    border: 1px solid var(--border-gray-f0f0f0);
+    border: 1px solid #f0f0f0;
     border-radius: 8px;
 }
 
@@ -894,21 +964,40 @@ h4 {
     text-indent: 35px;
 }
 
+
+
 .signature-section {
-    margin-top: 50px;
-    padding-right: 20px;
+    margin-top: 160px;
+    display: block;
     text-align: right;
+    padding-right: 10px;
 }
 
 .signature-date {
     color: var(--text-paragraph);
     font-size: 15px;
+    margin: 0;
+    font-family: var(--ui-font);
+    text-align: right;
+}
+
+.signature-space {
+    height: 70px;
+    padding-top: 1rem;
+    font-family: "Playwrite AU TAS", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: right;
 }
 
 .signature-name {
     color: var(--text-primary);
     font-size: 15px;
     font-weight: bold;
+    margin: 0;
+    font-family: var(--ui-font);
+    text-align: right;
 }
 
 .guide-list {
@@ -1325,7 +1414,7 @@ h4 {
    ===================================================================== */
 .chapter-title,
 .section-subtitle {
-    min-height: 60px;
+    min-height: 50px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--border-gray-f0f0f0);
     font-family: var(--book-heading-font);

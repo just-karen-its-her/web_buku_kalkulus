@@ -45,7 +45,7 @@ if (toggleBtn && sidebar) {
 
     // Daftarkan event 'click' (untuk emulator dan mouse)
     document.addEventListener('click', closeSidebarOnOutsideClick);
-    
+
     // Daftarkan event 'touchstart' (khusus untuk sentuhan jari di HP fisik)
     document.addEventListener('touchstart', closeSidebarOnOutsideClick, { passive: true });
 }
@@ -1042,7 +1042,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Daftar class tema font. 
     // String kosong '' adalah tema default (:root)
-    const fontThemes = ['', 'font-theme-2', 'font-theme-3'];
+    const fontThemes = [
+        '',
+        'font-theme-2',
+        'font-theme-3',
+        'font-theme-4',
+        'font-theme-5',
+        'font-theme-6',
+        'font-theme-7',
+        'font-theme-8',
+        'font-theme-9',
+        'font-theme-10',
+        'font-theme-11',
+        'font-theme-12',
+        'font-theme-13'
+    ];
     let currentThemeIndex = 0;
 
     fontBtn.addEventListener('click', (e) => {

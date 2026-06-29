@@ -1011,7 +1011,7 @@
     },
     "group_6": {
         "profile": {
-            "pageTitle": "Anggota Kelompok 5",
+            "pageTitle": "Anggota Kelompok V",
             "description": "<p>Pada materi Metode Pengembangan Pendekatan Numerik dalam Kalkulus Diferensial, tiga pemateri akan menjelaskan bagaimana konsep turunan yang awalnya dihitung secara analitik dapat didekati menggunakan metode numerik. Pembahasan dimulai dari pengertian dasar pendekatan numerik dan alasan penggunaannya dalam komputasi, kemudian dilanjutkan dengan metode Beda Maju (Forward Difference), Beda Mundur (Backward Difference), dan Beda Pusat (Central Difference) untuk menghitung turunan secara aproksimasi.</p><p>Selanjutnya, materi akan membahas cara mengevaluasi hasil pendekatan melalui analisis galat seperti galat mutlak dan galat relatif, serta mengenalkan kriteria pendekatan numerik yang baik, yaitu akurasi, stabilitas, dan efisiensi. Pada bagian akhir, dijelaskan interpretasi turunan sebagai laju perubahan, sehingga peserta dapat memahami makna hasil perhitungan turunan dalam berbagai permasalahan nyata.</p>",
             "members": [
                 {
@@ -1689,8 +1689,8 @@
     },
     "group_8": {
         "profile": {
-            "pageTitle": "Anggota Kelompok 8",
-            "description": "<p></p>",
+            "pageTitle": "Anggota Kelompok VIII",
+            "description": "<p>Materi pada BAB V ini secara ringkas membahas dua konsep fundamental kalkulus yang saling berkaitan, yaitu Turunan dan Integral. Pembahasan pertama berfokus pada aplikasi turunan untuk mengukur laju perubahan (baik rata-rata maupun sesaat) serta pengujian matematis untuk menentukan nilai ekstrem (maksimum dan minimum) dari suatu fungsi. Selanjutnya, materi beralih pada konsep Integral Tak Tentu yang didefinisikan secara formal sebagai kebalikan dari proses turunan (antiturunan), di mana Anda akan mempelajari formula dasar pengintegralan, hubungan timbal baliknya dengan turunan, hingga interpretasi dari konstanta integrasi, lengkap dengan studi kasus penerapannya di dunia nyata</p>",
             "members": [
                 {
                     "name": "M. Birzan Khoirulah",
@@ -1711,16 +1711,23 @@
             "content": "<p>Setelah mempelajari materi ini, peserta didik diharapkan mampu:</p><ul><li><strong>Menjelaskan konsep laju perubahan rata-rata dan laju perubahan sesaat</strong>, serta membedakan pendekatan kalkulus (limit) untuk menentukan laju perubahan pada suatu titik spesifik dibandingkan dengan laju perubahan dalam sebuah interval waktu.</li><li><strong>Menganalisis perilaku fungsi menggunakan turunan</strong> untuk menentukan titik kritis, serta menerapkan uji turunan pertama dan kedua untuk mengoptimalkan kinerja sistem, seperti menemukan nilai maksimum keuntungan atau nilai minimum biaya operasional.</li><li><strong>Mendeskripsikan konsep integral tak tentu sebagai operasi invers (antiturunan)</strong> dari diferensial, serta membangun pemahaman mengenai hubungan fundamental antara proses penurunan dan pengintegralan suatu fungsi.</li><li><strong>Menghitung hasil integral tak tentu</strong> menggunakan rumus dasar integral, serta menginterpretasikan makna konstanta integrasi ($C$) sebagai representasi dari keluarga fungsi antiturunan yang mungkin dihasilkan.</li><li><strong>Mengimplementasikan konsep turunan dan integral dalam penyelesaian studi kasus teknologi informasi (IT)</strong>, seperti menganalisis indikasi <em>memory leak</em> pada sistem, mengoptimalkan alokasi dana infrastruktur <em>cloud</em>, serta memodelkan pertumbuhan data pada server secara akurat.</li></ul>"
         },
         "material": {
-            "title": "Penggunaan Turunan dan Integral Tak Tentu",
+            "title": "BAB V Integral",
             "theoryContent": [
+                "<h2>Turunan dan Integral</h2>",
                 "<h3>A. Laju Perubahan Rata-rata</h3><h4>Rumus Laju Perubahan Rata-rata:</h4>\\[ \\frac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}} \\]<p><strong>Kegunaan Rumus:</strong> Mengukur seberapa cepat suatu nilai berubah dalam selang waktu tertentu.</p>",
+                "",
                 "<h3>B. Laju Perubahan Sesaat</h3><h4>Rumus Laju Perubahan Sesaat (Definisi Turunan):</h4>\\[ \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} \\]",
+                "",
                 "<h3>C. Nilai Minimum</h3><h4>Syarat Nilai Ekstrem Minimum:</h4>\\[ f''(x) > 0 \\]<p>Pendekatan menggunakan metode turunan untuk mencari nilai minimum (mencari titik kritis saat \\( f'(x) = 0 \\)) jauh lebih cepat dan akurat dibandingkan dengan simulasi menggunakan tabel nilai, karena langsung tertuju pada titik terendah dari suatu fungsi.</p>",
+                "",
                 "<h3>D. Nilai Maksimum</h3><h4>Syarat Nilai Ekstrem Maksimum:</h4>\\[ f''(x) < 0 \\]",
                 "<h3>E. Makna Sebenarnya dari Integral Tak Tentu</h3><p>Dalam matematika, integral tak tentu memiliki definisi formal sebagai operasi invers (kebalikan) dari diferensial (turunan). Nama lain dari integral tak tentu adalah antiturunan (<em>antiderivative</em>).</p><p>Ketika kita mengintegralkan suatu fungsi, kita melakukan konsep akumulasi kontinu. Artinya, kita mengumpulkan nilai-nilai perubahan yang sangat kecil (infinitesimal) yang terjadi secara terus-menerus pada suatu variabel, untuk menyusun kembali fungsi asal yang memuat total nilai tersebut.</p>",
-                "<h3>F. Hubungan Turunan dan Integral</h3><h4>A. Notasi Integral dan Rumus Dasar Integral Tak Tentu</h4><p>Integral merupakan kebalikan dari turunan atau disebut antiturunan.</p><p><strong>Hubungannya:</strong><br>Jika fungsi \\( F(x) \\) kita turunkan, hasilnya adalah \\( f(x) \\):</p>\\[ F(x)  Turunan ->  f(x) \\]<p>Sebaliknya, jika fungsi \\( f(x) \\) diintegralkan, hasilnya akan kembali menjadi \\( F(x) \\) ditambah konstanta \\( C \\):</p>\\[ \\ f(x) Antiturunan -> F(x) + C \\]<p>Konstanta \\( C \\) disebut sebagai konstanta integrasi.</p>",
+                "",
+                "<h3>F. Hubungan Turunan dan Integral</h3>",
+                "<h4>a. Notasi Integral dan Rumus Dasar Integral Tak Tentu</h4><p>Integral merupakan kebalikan dari turunan atau disebut antiturunan.</p><p><strong>Hubungannya:</strong><br>Jika fungsi \\( F(x) \\) kita turunkan, hasilnya adalah \\( f(x) \\):</p>\\[ F(x)  Turunan ->  f(x) \\]<p>Sebaliknya, jika fungsi \\( f(x) \\) diintegralkan, hasilnya akan kembali menjadi \\( F(x) \\) ditambah konstanta \\( C \\):</p>\\[ \\ f(x) Antiturunan -> F(x) + C \\]<p>Konstanta \\( C \\) disebut sebagai konstanta integrasi.</p>",
                 "<p><strong>Contoh Ilustrasi:</strong><br>Jika fungsi awal adalah:</p>\\[ F(x) = x^2 + 5 \\]<p>Maka turunannya adalah:</p>\\[ F'(x) = 2x \\]<p>Sehingga apabila diintegralkan kembali:</p>\\[ \\int 2x dx = x^2 + C \\]<p>Jadi, integral disebut antiturunan karena membalik proses dari turunan.</p>",
                 "<h4>Formula Dasar Integral Tak Tentu:</h4>\\[ \\int ax^n dx = \\frac{a}{n+1} x^{n+1} + C \\]<br><p><strong>Contoh Penerapan Dasar:</strong></p>\\[ \\int 4x^5 dx = \\frac{4}{6} x^{6} + C = \\frac{2}{3} x^6 + C \\]",
+                "",
                 "<h3>G. Interpretasi Konstanta Integrasi</h3><p>Interpretasi konstanta integrasi adalah penjelasan tentang makna konstanta \\( C \\) yang muncul pada hasil integral tak tentu. Konstanta ini menunjukkan bahwa suatu fungsi hasil integral memiliki banyak kemungkinan nilai tetap, karena setiap konstanta akan hilang (bernilai 0) saat diturunkan.</p><p>Dalam kalkulus, konstanta integrasi muncul ketika kita mencari anti-turunan (integral tak tentu) dari suatu fungsi.</p><p><strong>Contoh Sederhana:</strong><br>Jika kita mengintegralkan fungsi \\( f(x) = 2x \\):</p>\\[ \\int 2x dx = x^2 + C \\]<p>Di sini, \\( C \\) disebut sebagai konstanta integrasi.</p>"
             ],
             "examples": [
@@ -1770,11 +1777,11 @@
             ]
         },
         "quiz": {
-            "title": "Soal Evaluasi Integral Tak Tentu",
+            "title": "Soal Evaluasi Integral Tak Tentu Dan Aplikasi Turunan",
             "description": "Kumpulan soal evaluasi untuk menguji pemahaman tentang integral tak tentu dalam berbagai kasus manufaktur dan industri.",
             "questionsList": [
                 {
-                    "questionText": "<strong>1. Kasus Manufaktur Komponen Mesin</strong><br><br>Sebuah perusahaan manufaktur di Polman Babel sedang memantau laju perubahan biaya produksi tambahan (biaya marginal) untuk mencetak sebuah komponen mesin. Diketahui bahwa fungsi laju perubahan biaya tersebut terhadap jumlah unit yang diproduksi (\\( x \\)) dinyatakan dengan persamaan:<br>\\[ \\int (8x^{2}+6x-4) dx \\]<br>Jika manajemen ingin mengetahui fungsi biaya totalnya, tentukan hasil integral dari fungsi tersebut!",
+                    "questionText": "<strong>Kasus Manufaktur Komponen Mesin</strong><br><br>Sebuah perusahaan manufaktur di Polman Babel sedang memantau laju perubahan biaya produksi tambahan (biaya marginal) untuk mencetak sebuah komponen mesin. Diketahui bahwa fungsi laju perubahan biaya tersebut terhadap jumlah unit yang diproduksi (\\( x \\)) dinyatakan dengan persamaan:<br>\\[ \\int (8x^{2}+6x-4) dx \\]<br>Jika manajemen ingin mengetahui fungsi biaya totalnya, tentukan hasil integral dari fungsi tersebut!",
                     "options": {
                         "A": "\\( \\frac{8}{3}x^{3}+3x^{2}-4x+C \\)",
                         "B": "\\( \\frac{8}{3}x^{3}+6x^{2}-4x+C \\)",
@@ -1785,7 +1792,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (8x^{2}+6x-4) dx = 8\\left(\\frac{x^{3}}{3}\\right)+6\\left(\\frac{x^{2}}{2}\\right)-4x+C = \\frac{8}{3}x^{3}+3x^{2}-4x+C \\]<br><strong>Penjelasan:</strong><br>Setiap suku diintegralkan menggunakan aturan dasar integral pangkat: \\( \\int x^{n}dx = \\frac{x^{n+1}}{n+1}+C \\)."
                 },
                 {
-                    "questionText": "<strong>2. Kasus Percetakan Brosur</strong><br><br>Sebuah perusahaan percetakan sedang menganalisis biaya tambahan produksi brosur setiap harinya. Fungsi laju perubahan biaya diberikan oleh:<br>\\[ \\int (10x^{3}+5x^{2}-7) dx \\]<br>Tentukan fungsi biaya totalnya!",
+                    "questionText": "<strong>Kasus Percetakan Brosur</strong><br><br>Sebuah perusahaan percetakan sedang menganalisis biaya tambahan produksi brosur setiap harinya. Fungsi laju perubahan biaya diberikan oleh:<br>\\[ \\int (10x^{3}+5x^{2}-7) dx \\]<br>Tentukan fungsi biaya totalnya!",
                     "options": {
                         "A": "\\( \\frac{10}{3}x^{4}+\\frac{5}{2}x^{3}-7x+C \\)",
                         "B": "\\( \\frac{5}{2}x^{4}+\\frac{5}{3}x^{3}-7x+C \\)",
@@ -1796,7 +1803,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (10x^{3}+5x^{2}-7) dx = 10\\left(\\frac{x^{4}}{4}\\right)+5\\left(\\frac{x^{3}}{3}\\right)-7x+C = \\frac{5}{2}x^{4}+\\frac{5}{3}x^{3}-7x+C \\]<br><strong>Penjelasan:</strong><br>Pangkat variabel ditambah satu, lalu dibagi dengan pangkat baru yang terbentuk."
                 },
                 {
-                    "questionText": "<strong>3. Kasus Pabrik Sensor Otomatis</strong><br><br>Sebuah pabrik elektronik sedang menghitung biaya marginal pembuatan sensor otomatis. Fungsi laju perubahan biaya dinyatakan oleh:<br>\\[ \\int (12x^{2}-9x+8) dx \\]<br>Tentukan fungsi biaya totalnya!",
+                    "questionText": "<strong>Kasus Pabrik Sensor Otomatis</strong><br><br>Sebuah pabrik elektronik sedang menghitung biaya marginal pembuatan sensor otomatis. Fungsi laju perubahan biaya dinyatakan oleh:<br>\\[ \\int (12x^{2}-9x+8) dx \\]<br>Tentukan fungsi biaya totalnya!",
                     "options": {
                         "A": "\\( 4x^{3}-9x^{2}+8x+C \\)",
                         "B": "\\( 4x^{3}-\\frac{9}{2}x^{2}+8x+C \\)",
@@ -1818,7 +1825,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (15x^{4}+20x) dx = 15\\left(\\frac{x^{5}}{5}\\right)+20\\left(\\frac{x^{2}}{2}\\right)+C = 3x^{5}+10x^{2}+C \\]<br><strong>Penjelasan:</strong><br>Konstanta integrasi (\\( C \\)) selalu ditambahkan pada hasil perhitungan integral tak tentu."
                 },
                 {
-                    "questionText": "<strong>5. Kasus Produksi Suku Cadang Kendaraan</strong><br><br>Sebuah perusahaan otomotif sedang menghitung biaya tambahan produksi suku cadang kendaraan. Fungsi laju perubahan biaya:<br>\\[ \\int (18x^{3}-12x^{2}+6x) dx \\]",
+                    "questionText": "<strong>Kasus Produksi Suku Cadang Kendaraan</strong><br><br>Sebuah perusahaan otomotif sedang menghitung biaya tambahan produksi suku cadang kendaraan. Fungsi laju perubahan biaya:<br>\\[ \\int (18x^{3}-12x^{2}+6x) dx \\]",
                     "options": {
                         "A": "\\( 9x^{4}-4x^{3}+3x^{2}+C \\)",
                         "B": "\\( \\frac{9}{2}x^{4}-3x^{3}+3x^{2}+C \\)",
@@ -1829,7 +1836,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (18x^{3}-12x^{2}+6x) dx = 18\\left(\\frac{x^{4}}{4}\\right)-12\\left(\\frac{x^{3}}{3}\\right)+6\\left(\\frac{x^{2}}{2}\\right)+C = \\frac{9}{2}x^{4}-4x^{3}+3x^{2}+C \\]<br><strong>Penjelasan:</strong><br>Integral dari operasi penjumlahan atau pengurangan fungsi dapat dihitung secara terpisah per suku."
                 },
                 {
-                    "questionText": "<strong>6. Kasus Produksi Kain Tekstil</strong><br><br>Sebuah perusahaan tekstil ingin mengetahui biaya total produksi kain. Fungsi biaya marginal diketahui:<br>\\[ \\int (25x^{2}+10x-15) dx \\]<br>Tentukan fungsi biaya totalnya!",
+                    "questionText": "<strong>Kasus Produksi Kain Tekstil</strong><br><br>Sebuah perusahaan tekstil ingin mengetahui biaya total produksi kain. Fungsi biaya marginal diketahui:<br>\\[ \\int (25x^{2}+10x-15) dx \\]<br>Tentukan fungsi biaya totalnya!",
                     "options": {
                         "A": "\\( \\frac{25}{3}x^{3}+5x^{2}-15+C \\)",
                         "B": "\\( \\frac{25}{3}x^{3}+5x^{2}-15x+C \\)",
@@ -1840,7 +1847,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (25x^{2}+10x-15) dx = 25\\left(\\frac{x^{3}}{3}\\right)+10\\left(\\frac{x^{2}}{2}\\right)-15x+C = \\frac{25}{3}x^{3}+5x^{2}-15x+C \\]<br><strong>Penjelasan:</strong><br>Suku konstanta \\( -15 \\) berubah menjadi \\( -15x \\) setelah melewati proses integrasi terhadap variabel \\( x \\)."
                 },
                 {
-                    "questionText": "<strong>7. Kasus Produksi Obat Farmasi</strong><br><br>Sebuah perusahaan farmasi sedang menghitung biaya tambahan produksi obat. Fungsi laju perubahan biaya:<br>\\[ \\int (14x^{5}+7x^{2}-9) dx \\]<br>Tentukan fungsi biaya totalnya!",
+                    "questionText": "<strong>Kasus Produksi Obat Farmasi</strong><br><br>Sebuah perusahaan farmasi sedang menghitung biaya tambahan produksi obat. Fungsi laju perubahan biaya:<br>\\[ \\int (14x^{5}+7x^{2}-9) dx \\]<br>Tentukan fungsi biaya totalnya!",
                     "options": {
                         "A": "\\( \\frac{7}{3}x^{6}+\\frac{7}{3}x^{3}-9x+C \\)",
                         "B": "\\( \\frac{14}{5}x^{6}+\\frac{7}{2}x^{3}-9x+C \\)",
@@ -1851,7 +1858,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (14x^{5}+7x^{2}-9) dx = 14\\left(\\frac{x^{6}}{6}\\right)+7\\left(\\frac{x^{3}}{3}\\right)-9x+C = \\frac{7}{3}x^{6}+\\frac{7}{3}x^{3}-9x+C \\]<br><strong>Penjelasan:</strong><br>Gunakan aturan integral pangkat dasar secara konsisten pada setiap suku yang ada."
                 },
                 {
-                    "questionText": "<strong>8. Kasus Produksi Botol Plastik</strong><br><br>Sebuah pabrik plastik sedang mengamati biaya tambahan produksi botol. Fungsi biaya marginalnya:<br>\\[ \\int (9x^{4}-16x+12) dx \\]<br>Tentukan fungsi biaya total!",
+                    "questionText": "<strong>Kasus Produksi Botol Plastik</strong><br><br>Sebuah pabrik plastik sedang mengamati biaya tambahan produksi botol. Fungsi biaya marginalnya:<br>\\[ \\int (9x^{4}-16x+12) dx \\]<br>Tentukan fungsi biaya total!",
                     "options": {
                         "A": "\\( \\frac{9}{4}x^{5}-8x^{2}+12x+C \\)",
                         "B": "\\( \\frac{9}{5}x^{5}-16x^{2}+12x+C \\)",
@@ -1862,7 +1869,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (9x^{4}-16x+12) dx = 9\\left(\\frac{x^{5}}{5}\\right)-16\\left(\\frac{x^{2}}{2}\\right)+12x+C = \\frac{9}{5}x^{5}-8x^{2}+12x+C \\]<br><strong>Penjelasan:</strong><br>Masing-masing suku diintegralkan secara terpisah satu per satu."
                 },
                 {
-                    "questionText": "<strong>9. Kasus Produksi Meja Furnitur</strong><br><br>Sebuah perusahaan furnitur sedang menghitung biaya tambahan produksi meja. Fungsi laju perubahan biaya:<br>\\[ \\int (20x^{3}+8x^{2}+4x-5) dx \\]<br>Tentukan fungsi biaya totalnya!",
+                    "questionText": "<strong>Kasus Produksi Meja Furnitur</strong><br><br>Sebuah perusahaan furnitur sedang menghitung biaya tambahan produksi meja. Fungsi laju perubahan biaya:<br>\\[ \\int (20x^{3}+8x^{2}+4x-5) dx \\]<br>Tentukan fungsi biaya totalnya!",
                     "options": {
                         "A": "\\( 5x^{4}+\\frac{8}{3}x^{3}+4x^{2}-5x+C \\)",
                         "B": "\\( 5x^{4}+\\frac{8}{3}x^{3}+2x^{2}-5x+C \\)",
@@ -1873,7 +1880,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (20x^{3}+8x^{2}+4x-5) dx = 20\\left(\\frac{x^{4}}{4}\\right)+8\\left(\\frac{x^{3}}{3}\\right)+4\\left(\\frac{x^{2}}{2}\\right)-5x+C = 5x^{4}+\\frac{8}{3}x^{3}+2x^{2}-5x+C \\]<br><strong>Penjelasan:</strong><br>Integral mengubah fungsi laju perubahan (turunan/marginal) kembali menjadi fungsi total asal."
                 },
                 {
-                    "questionText": "<strong>10. Kasus Produksi Rangka Mesin Logam</strong><br><br>Sebuah perusahaan pengolahan logam sedang menganalisis biaya marginal produksi rangka mesin. Fungsi laju perubahan biaya diberikan oleh:<br>\\[ \\int (30x^{2}-18x+9) dx \\]<br>Tentukan fungsi biaya totalnya!",
+                    "questionText": "<strong>Kasus Produksi Rangka Mesin Logam</strong><br><br>Sebuah perusahaan pengolahan logam sedang menganalisis biaya marginal produksi rangka mesin. Fungsi laju perubahan biaya diberikan oleh:<br>\\[ \\int (30x^{2}-18x+9) dx \\]<br>Tentukan fungsi biaya totalnya!",
                     "options": {
                         "A": "\\( 10x^{3}-18x^{2}+9x+C \\)",
                         "B": "\\( 10x^{3}-9x^{2}+9+C \\)",
@@ -1884,7 +1891,7 @@
                     "explanation": "<strong>Jawaban:</strong><br>\\[ \\int (30x^{2}-18x+9) dx = 30\\left(\\frac{x^{3}}{3}\\right)-18\\left(\\frac{x^{2}}{2}\\right)+9x+C = 10x^{3}-9x^{2}+9x+C \\]<br><strong>Penjelasan:</strong><br>Integral tak tentu menghasilkan fungsi asal beserta konstanta integrasi \\( C \\) karena tidak memiliki batas nilai atas dan bawah."
                 },
                 {
-                    "questionText": "<strong>Soal 1</strong><br><br>Diketahui fungsi \\( f(x) = 8x^5 + 7 \\). Tentukan hasil integral tak tentu dari fungsi tersebut, atau \\( \\int f(x) dx \\)!",
+                    "questionText": "<strong></strong><br><br>Diketahui fungsi \\( f(x) = 8x^5 + 7 \\). Tentukan hasil integral tak tentu dari fungsi tersebut, atau \\( \\int f(x) dx \\)!",
                     "options": {
                         "A": "\\( \\frac{4}{3}x^6 + 7x + C \\)",
                         "B": "\\( \\frac{8}{5}x^6 + 7x + C \\)",
@@ -1895,7 +1902,7 @@
                     "explanation": "<strong>Pembahasan:</strong><br>\\[ \\int (8x^5 + 7) dx \\]<br>Integralkan setiap suku menggunakan aturan dasar \\( \\int x^n dx = \\frac{1}{n+1}x^{n+1} \\):<br>\\[ = 8\\left(\\frac{x^6}{6}\\right) + 7x + C \\]<br>Sederhanakan pecahan \\( \\frac{8}{6} \\) menjadi \\( \\frac{4}{3} \\):<br>\\[ = \\frac{4}{3}x^6 + 7x + C \\]"
                 },
                 {
-                    "questionText": "<strong>Soal 2</strong><br><br>Diketahui fungsi \\( f(x) = 6x^3 - 2x^2 + 5 \\). Tentukan hasil integral tak tentu \\( \\int f(x) dx \\)!",
+                    "questionText": "<strong></strong><br><br>Diketahui fungsi \\( f(x) = 6x^3 - 2x^2 + 5 \\). Tentukan hasil integral tak tentu \\( \\int f(x) dx \\)!",
                     "options": {
                         "A": "\\( \\frac{3}{2}x^4 - \\frac{2}{3}x^3 + 5x + C \\)",
                         "B": "\\( 2x^4 - x^3 + 5x + C \\)",
@@ -1906,7 +1913,7 @@
                     "explanation": "<strong>Pembahasan:</strong><br>\\[ \\int (6x^3 - 2x^2 + 5) dx \\]<br>Integralkan setiap suku:<br>\\[ = 6\\left(\\frac{x^4}{4}\\right) - 2\\left(\\frac{x^3}{3}\\right) + 5x + C \\]<br>Sederhanakan pecahan \\( \\frac{6}{4} \\) menjadi \\( \\frac{3}{2} \\):<br>\\[ = \\frac{3}{2}x^4 - \\frac{2}{3}x^3 + 5x + C \\]"
                 },
                 {
-                    "questionText": "<strong>Soal 3</strong><br><br>Diketahui fungsi \\( f(x) = 13x^2 + 8x - 3 \\). Tentukan hasil integral tak tentu \\( \\int f(x) dx \\)!",
+                    "questionText": "<strong></strong><br><br>Diketahui fungsi \\( f(x) = 13x^2 + 8x - 3 \\). Tentukan hasil integral tak tentu \\( \\int f(x) dx \\)!",
                     "options": {
                         "A": "\\( \\frac{13}{3}x^3 + 4x^2 - 3x + C \\)",
                         "B": "\\( \\frac{13}{2}x^3 + 4x^2 - 3x + C \\)",
@@ -1917,7 +1924,7 @@
                     "explanation": "<strong>Pembahasan:</strong><br>\\[ \\int (13x^2 + 8x - 3) dx \\]<br>Integralkan setiap suku:<br>\\[ = 13\\left(\\frac{x^3}{3}\\right) + 8\\left(\\frac{x^2}{2}\\right) - 3x + C \\]<br>Sederhanakan pecahan \\( \\frac{8}{2} \\) menjadi \\( 4 \\):<br>\\[ = \\frac{13}{3}x^3 + 4x^2 - 3x + C \\]"
                 },
                 {
-                    "questionText": "<strong>Soal 4</strong><br><br>Diketahui fungsi \\( f(x) = 18x^5 - 10x^2 + 4 \\).<br>Tentukan:<br>a. Integral tak tentu \\( \\int f(x) dx \\)<br>b. Turunkan kembali fungsi hasil integral tersebut!",
+                    "questionText": "<strong></strong><br><br>Diketahui fungsi \\( f(x) = 18x^5 - 10x^2 + 4 \\).<br>Tentukan:<br>a. Integral tak tentu \\( \\int f(x) dx \\)<br>b. Turunkan kembali fungsi hasil integral tersebut!",
                     "options": {
                         "A": "a) \\( 3x^6 - \\frac{10}{3}x^3 + 4x + C \\) <br>b) \\( 18x^5 - 10x^2 + 4 \\)",
                         "B": "a) \\( 3x^6 - 5x^3 + 4x + C \\) <br>b) \\( 18x^5 - 15x^2 + 4 \\)",
@@ -1928,7 +1935,7 @@
                     "explanation": "<strong>Pembahasan:</strong><br><strong>a. Menentukan Integral Tak Tentu:</strong><br>\\[ \\int (18x^5 - 10x^2 + 4) dx \\]<br>\\[ = 18\\left(\\frac{x^6}{6}\\right) - 10\\left(\\frac{x^3}{3}\\right) + 4x + C \\]<br>\\[ = 3x^6 - \\frac{10}{3}x^3 + 4x + C \\]<br><br><strong>b. Menurunkan Kembali Hasil Integral:</strong><br>Misalkan fungsi hasil integral adalah \\( F(x) \\). Kita akan mencari \\( F'(x) \\):<br>\\[ F'(x) = 3(6x^5) - \\frac{10}{3}(3x^2) + 4 + 0 \\]<br>\\[ F'(x) = 18x^5 - 10x^2 + 4 \\]<br><em>Terbukti bahwa jika suatu fungsi diintegralkan lalu diturunkan kembali, hasilnya akan kembali ke fungsi semula.</em>"
                 },
                 {
-                    "questionText": "<strong>Soal 5</strong><br><br>Diketahui fungsi \\( f(x) = 20x^2 + 5x^2 - 3 \\).<br>Tentukan:<br>a. Integral tak tentu \\( \\int f(x) dx \\)<br>b. Turunkan kembali fungsi hasil integral tersebut!",
+                    "questionText": "<strong></strong><br><br>Diketahui fungsi \\( f(x) = 20x^2 + 5x^2 - 3 \\).<br>Tentukan:<br>a. Integral tak tentu \\( \\int f(x) dx \\)<br>b. Turunkan kembali fungsi hasil integral tersebut!",
                     "options": {
                         "A": "a) \\( \\frac{25}{3}x^3 - 3x + C \\) <br>b) \\( 25x^2 - 3 \\)",
                         "B": "a) \\( \\frac{25}{2}x^3 - 3x + C \\) <br>b) \\( 25x^2 - 3 \\)",
@@ -1937,41 +1944,151 @@
                     },
                     "correctAnswer": "A",
                     "explanation": "<strong>Pembahasan:</strong><br>Fungsi awal dapat disederhanakan terlebih dahulu karena memiliki suku sejenis:<br>\\[ f(x) = 20x^2 + 5x^2 - 3 \\implies f(x) = 25x^2 - 3 \\]<br><br><strong>a. Menentukan Integral Tak Tentu:</strong><br>\\[ \\int (25x^2 - 3) dx \\]<br>\\[ = 25\\left(\\frac{x^3}{3}\\right) - 3x + C \\]<br>\\[ = \\frac{25}{3}x^3 - 3x + C \\]<br><br><strong>b. Menurunkan Kembali Hasil Integral:</strong><br>\\[ F'(x) = \\frac{25}{3}(3x^2) - 3 + 0 \\]<br>\\[ F'(x) = 25x^2 - 3 \\]<br>Atau dalam bentuk aslinya sama dengan \\( 20x^2 + 5x^2 - 3 \\)."
+                },
+                {
+                    "questionText": "<strong>Analisis Beban Server E-Ticketing</strong><br><br>Sebuah sistem database MariaDB untuk platform e-ticketing sedang mengalami lonjakan akses. Akumulasi volume data log yang masuk ke server (dalam Megabyte) didefinisikan oleh fungsi:<br>\\[ f(t) = 2t^2 + 15t + 10 \\]<br>Di mana \\( f(t) \\) adalah total data dan \\( t \\) adalah waktu dalam detik.<br><br>Hitunglah laju perubahan rata-rata akumulasi data yang masuk antara detik ke-2 dan detik ke-6! Jika kapasitas <em>bandwidth</em> maksimal database untuk penulisan log hanya 30 MB/detik, implikasi teknis apa yang terjadi pada sistem?",
+                    "options": {
+                        "A": "31 MB/detik, Sistem tidak akan mengalami masalah (aman).",
+                        "B": "31 MB/detik, Sistem akan mengalami <em>bottleneck</em> (penumpukan antrean data).",
+                        "C": "48 MB/detik, Sistem akan mengalami <em>bottleneck</em>.",
+                        "D": "25 MB/detik, Sistem tidak akan mengalami masalah."
+                    },
+                    "correctAnswer": "B",
+                    "explanation": "<strong>Jawaban:</strong><br>Menggunakan rumus laju perubahan rata-rata: \\[ \\text{Laju} = \\frac{f(6) - f(2)}{6 - 2} \\]<br>Hitung nilai \\( f(6) \\):<br>\\[ f(6) = 2(6)^2 + 15(6) + 10 = 72 + 90 + 10 = 172 \\]<br>Hitung nilai \\( f(2) \\):<br>\\[ f(2) = 2(2)^2 + 15(2) + 10 = 8 + 30 + 10 = 48 \\]<br>Hitung laju perubahan rata-rata:<br>\\[ \\text{Laju} = \\frac{172 - 48}{4} = \\frac{124}{4} = 31 \\text{ MB/detik} \\]<br><br><strong>Penjelasan:</strong><br>Laju data rata-rata adalah 31 MB/detik, yang lebih besar dari kapasitas maksimal <em>bandwidth</em> yaitu 30 MB/detik. Sistem akan mengalami <em>bottleneck</em> yang dapat menyebabkan peningkatan latensi aplikasi atau hilangnya log data (<em>packet loss</em>)."
+                },
+                {
+                    "questionText": "<strong>Laju Koneksi Sesi Aplikasi Smart-DP</strong><br><br>Pada saat jam pulang sekolah, aplikasi pemantauan anak Smart-DP mencatat akumulasi jumlah sesi pengguna aktif yang terhubung ke server. Model fungsinya adalah:<br>\\[ U(t) = 5t^2 + 20t + 100 \\]<br>Di mana \\( U(t) \\) adalah jumlah sesi aktif dan \\( t \\) adalah waktu dalam menit.<br><br>Hitunglah laju perubahan rata-rata jumlah sesi aktif antara menit ke-10 dan menit ke-15!",
+                    "options": {
+                        "A": "\\( 125 \\text{ sesi/menit} \\)",
+                        "B": "\\( 135 \\text{ sesi/menit} \\)",
+                        "C": "\\( 145 \\text{ sesi/menit} \\)",
+                        "D": "\\( 155 \\text{ sesi/menit} \\)"
+                    },
+                    "correctAnswer": "C",
+                    "explanation": "<strong>Jawaban:</strong><br>1. Hitung nilai \\( U(15) \\):<br>\\[ U(15) = 5(15)^2 + 20(15) + 100 = 5(225) + 300 + 100 = 1525 \\]<br>2. Hitung nilai \\( U(10) \\):<br>\\[ U(10) = 5(10)^2 + 20(10) + 100 = 5(100) + 200 + 100 = 800 \\]<br>3. Hitung laju perubahan rata-rata:<br>\\[ \\text{Laju} = \\frac{1525 - 800}{15 - 10} = \\frac{725}{5} = 145 \\text{ sesi/menit} \\]"
+                },
+                {
+                    "questionText": "<strong>Eksekusi Query Relasional</strong><br><br>Sebuah <em>script</em> PHP mengeksekusi sinkronisasi tabel relasional pada MySQL. Jumlah baris data yang diproses (dalam ribuan baris) mengikuti fungsi terhadap waktu \\( x \\) (dalam milidetik):<br>\\[ Q(x) = x^3 + 2x^2 + 5 \\]<br><br>Berapakah laju perubahan rata-rata baris data yang diproses dari milidetik ke-1 hingga milidetik ke-3?",
+                    "options": {
+                        "A": "\\( 15 \\text{ ribu baris/milidetik} \\)",
+                        "B": "\\( 21 \\text{ ribu baris/milidetik} \\)",
+                        "C": "\\( 42 \\text{ ribu baris/milidetik} \\)",
+                        "D": "\\( 50 \\text{ ribu baris/milidetik} \\)"
+                    },
+                    "correctAnswer": "B",
+                    "explanation": "<strong>Jawaban:</strong><br>1. Hitung nilai \\( Q(3) \\):<br>\\[ Q(3) = (3)^3 + 2(3)^2 + 5 = 27 + 18 + 5 = 50 \\]<br>2. Hitung nilai \\( Q(1) \\):<br>\\[ Q(1) = (1)^3 + 2(1)^2 + 5 = 1 + 2 + 5 = 8 \\]<br>3. Hitung laju perubahan rata-rata:<br>\\[ \\text{Laju} = \\frac{50 - 8}{3 - 1} = \\frac{42}{2} = 21 \\text{ ribu baris/milidetik} \\]"
+                },
+                {
+                    "questionText": "<strong>Indikasi <em>Memory Leak</em> pada REST API</strong><br><br>Dalam pengujian beban (<em>load testing</em>) REST API untuk fitur E-Ticketing, akumulasi konsumsi memori RAM (\\( M \\)) dalam Megabyte (MB) setelah <em>service</em> berjalan selama \\( x \\) detik dimodelkan dengan fungsi:<br>\\[ M(x) = 4x^2 + 8x + 120 \\]<br>Hitunglah laju pertambahan memori sesaat tepat pada detik ke-5 (\\( x = 5 \\)). Jika sistem <em>auto-restart</em> dipicu apabila laju kenaikan memori sesaat melebihi 45 MB/detik, apakah pada detik ke-5 sistem akan melakukan <em>restart</em>?",
+                    "options": {
+                        "A": "40 MB/detik, sistem tidak <em>restart</em>.",
+                        "B": "45 MB/detik, sistem tidak <em>restart</em>.",
+                        "C": "48 MB/detik, ya, sistem akan melakukan <em>auto-restart</em>.",
+                        "D": "52 MB/detik, ya, sistem akan melakukan <em>auto-restart</em>."
+                    },
+                    "correctAnswer": "C",
+                    "explanation": "<strong>Jawaban:</strong><br>Berdasarkan limit definisi turunan didapatkan fungsi laju perubahan memori sesaat:<br>\\[ M'(x) = \\lim_{h \\to 0} \\frac{M(x+h) - M(x)}{h} = 8x + 8 \\]<br>Hitung laju sesaat pada detik ke-5 (\\( x = 5 \\)):<br>\\[ M'(5) = 8(5) + 8 = 40 + 8 = 48 \\text{ MB/detik} \\]<br><br><strong>Keputusan Sistem:</strong> Laju pada detik ke-5 adalah 48 MB/detik. Karena \\( 48 > 45 \\text{ MB/detik} \\), maka <strong>ya</strong>, sistem akan melakukan <em>auto-restart</em>."
+                },
+                {
+                    "questionText": "<strong>Pemanfaatan CPU pada <em>Background Task</em></strong><br><br>Tingkat pemanfaatan CPU (dalam persentase) pada sebuah <em>server</em> saat memproses antrean notifikasi aplikasi Smart-DP mengikuti fungsi waktu \\( t \\) (dalam detik):<br>\\[ P(t) = 3t^2 + 6t + 25 \\]<br>Tentukan fungsi laju perubahan sesaat \\( P'(t) \\) dan hitung lajunya pada detik ke-4!",
+                    "options": {
+                        "A": "\\( 24 \\%\\text{/detik} \\)",
+                        "B": "\\( 26 \\%\\text{/detik} \\)",
+                        "C": "\\( 30 \\%\\text{/detik} \\)",
+                        "D": "\\( 36 \\%\\text{/detik} \\)"
+                    },
+                    "correctAnswer": "C",
+                    "explanation": "<strong>Jawaban:</strong><br>1. Tentukan fungsi turunan \\( P'(t) \\):<br>\\[ P'(t) = 6t + 6 \\]<br>2. Hitung pada \\( t = 4 \\):<br>\\[ P'(4) = 6(4) + 6 = 24 + 6 = 30 \\%\\text{/detik} \\]"
+                },
+                {
+                    "questionText": "<strong>Akumulasi Permintaan HTTP (<em>HTTP Requests</em>)</strong><br><br>Akumulasi jumlah permintaan HTTP yang masuk ke <em>load balancer</em> (dalam ratusan permintaan) didefinisikan sebagai:<br>\\[ R(t) = 2t^2 + 10t \\]<br>Temukan \\( R'(t) \\), lalu tentukan laju perubahan sesaat pada detik ke-10!",
+                    "options": {
+                        "A": "40 ratusan permintaan/detik",
+                        "B": "50 ratusan permintaan/detik",
+                        "C": "60 ratusan permintaan/detik",
+                        "D": "70 ratusan permintaan/detik"
+                    },
+                    "correctAnswer": "B",
+                    "explanation": "<strong>Jawaban:</strong><br>1. Tentukan turunan pertama \\( R'(t) \\):<br>\\[ R'(t) = 4t + 10 \\]<br>2. Hitung pada \\( t = 10 \\):<br>\\[ R'(10) = 4(10) + 10 = 40 + 10 = 50 \\text{ ratusan permintaan/detik} \\]"
+                },
+                {
+                    "questionText": "<strong>Nilai Minimum - Optimasi Biaya <em>Compute Engine</em></strong><br><br>Untuk menjalankan layanan <em>background</em> aplikasi, digunakan <em>Compute Engine</em> berbasis <em>cloud</em>. Biaya operasional harian (\\( C \\)) dalam ribuan Rupiah bergantung pada jumlah <em>Compute Units</em> (\\( x \\)) yang diaktifkan dengan fungsi:<br>\\[ C(x) = 9x + \\frac{144}{x}, \\quad x > 0 \\]<br>Berapakah jumlah <em>Compute Units</em> (\\( x \\)) yang harus dijalankan agar biaya operasional mencapai minimum, dan berapakah total biaya minimum harian yang harus dibayarkan?",
+                    "options": {
+                        "A": "3 Compute Units dengan biaya 65 ribu Rupiah",
+                        "B": "4 Compute Units dengan biaya 72 ribu Rupiah",
+                        "C": "5 Compute Units dengan biaya 80 ribu Rupiah",
+                        "D": "6 Compute Units dengan biaya 78 ribu Rupiah"
+                    },
+                    "correctAnswer": "B",
+                    "explanation": "<strong>Jawaban:</strong><br>1. <strong>Turunan Pertama dan Titik Stasioner (\\( C'(x) = 0 \\)):</strong><br>\\[ C'(x) = 9 - \\frac{144}{x^2} = 0 \\implies 9x^2 = 144 \\implies x^2 = 16 \\]<br>Karena \\( x > 0 \\), maka \\( x = 4 \\) (Dibutuhkan 4 Compute Units).<br><br>2. <strong>Total Biaya Minimum:</strong><br>Substitusikan \\( x = 4 \\) ke fungsi awal \\( C(x) \\):<br>\\[ C(4) = 9(4) + \\frac{144}{4} = 36 + 36 = 72 \\text{ ribu Rupiah} \\]"
+                },
+                {
+                    "questionText": "<strong>Nilai Minimum - Optimasi Latensi Jaringan</strong><br><br>Latensi (\\( L \\)) dalam milidetik pada jaringan server aplikasi pemantauan dipengaruhi oleh jumlah node penyeimbang beban (\\( x \\)). Fungsi latensi dirumuskan sebagai:<br>\\[ L(x) = 2x + \\frac{50}{x}, \\quad x > 0 \\]<br>Tentukan jumlah node (\\( x \\)) agar latensi minimum, dan hitung latensi minimum tersebut!",
+                    "options": {
+                        "A": "4 node, dengan latensi 20,5 milidetik",
+                        "B": "5 node, dengan latensi 20 milidetik",
+                        "C": "10 node, dengan latensi 25 milidetik",
+                        "D": "25 node, dengan latensi 52 milidetik"
+                    },
+                    "correctAnswer": "B",
+                    "explanation": "<strong>Jawaban:</strong><br>1. <strong>Turunan Pertama dan Titik Stasioner:</strong><br>\\[ L'(x) = 2 - \\frac{50}{x^2} = 0 \\implies 2x^2 = 50 \\implies x^2 = 25 \\]<br>Karena \\( x > 0 \\), maka \\( x = 5 \\).<br><br>2. <strong>Nilai Latensi Minimum:</strong><br>\\[ L(5) = 2(5) + \\frac{50}{5} = 10 + 10 = 20 \\text{ milidetik} \\]"
+                },
+                {
+                    "questionText": "<strong>Nilai Maksimum - Profit Penjualan E-Ticketing</strong><br><br>Platform E-ticketing merilis fitur promosi. Keuntungan bulanan (\\( P \\)) dalam juta Rupiah dipengaruhi oleh alokasi dana iklan (\\( x \\)) dalam juta Rupiah, mengikuti fungsi:<br>\\[ P(x) = -2x^2 + 24x - 40 \\]<br>Tentukan jumlah alokasi dana iklan agar keuntungan mencapai nilai maksimum, dan berapakah nilai maksimum (keuntungan tertinggi) yang bisa didapatkan?",
+                    "options": {
+                        "A": "5 juta Rupiah, dengan keuntungan 30 juta Rupiah",
+                        "B": "6 juta Rupiah, dengan keuntungan 32 juta Rupiah",
+                        "C": "8 juta Rupiah, dengan keuntungan 24 juta Rupiah",
+                        "D": "12 juta Rupiah, dengan keuntungan 40 juta Rupiah"
+                    },
+                    "correctAnswer": "B",
+                    "explanation": "<strong>Jawaban:</strong><br>1. <strong>Turunan Pertama dan Titik Stasioner (syarat \\( P'(x) = 0 \\)):</strong><br>\\[ P'(x) = -4x + 24 = 0 \\implies 4x = 24 \\implies x = 6 \\]<br>Alokasi dana iklan sebesar 6 juta Rupiah.<br><br>2. <strong>Nilai Maksimum:</strong><br>Substitusikan \\( x = 6 \\) ke fungsi \\( P(x) \\):<br>\\[ P(6) = -2(6)^2 + 24(6) - 40 = -2(36) + 144 - 40 = -72 + 144 - 40 = 32 \\text{ juta Rupiah} \\]"
+                },
+                {
+                    "questionText": "<strong>Nilai Maksimum - Pendapatan Langganan Premium Smart-DP</strong><br><br>Pendapatan kotor bulanan (\\( R \\)) dalam juta Rupiah dari fitur berlangganan (<em>subscription</em>) bergantung pada pengeluaran subsidi <em>voucher</em> pengguna (\\( x \\)) dalam juta Rupiah. Fungsinya adalah:<br>\\[ R(x) = -3x^2 + 60x - 100 \\]<br>Tentukan jumlah subsidi yang harus dikeluarkan agar pendapatan maksimal, dan berapakah total pendapatan maksimal tersebut!",
+                    "options": {
+                        "A": "10 juta Rupiah subsidi, total pendapatan 200 juta Rupiah",
+                        "B": "15 juta Rupiah subsidi, total pendapatan 250 juta Rupiah",
+                        "C": "20 juta Rupiah subsidi, total pendapatan 300 juta Rupiah",
+                        "D": "30 juta Rupiah subsidi, total pendapatan 400 juta Rupiah"
+                    },
+                    "correctAnswer": "A",
+                    "explanation": "<strong>Jawaban:</strong><br>1. <strong>Turunan Pertama dan Titik Stasioner:</strong><br>\\[ R'(x) = -6x + 60 = 0 \\implies 6x = 60 \\implies x = 10 \\]<br>Subsidi voucher sebesar 10 juta Rupiah.<br><br>2. <strong>Hitung Pendapatan Maksimal:</strong><br>Substitusikan \\( x = 10 \\) ke fungsi awal \\( R(x) \\):<br>\\[ R(10) = -3(10)^2 + 60(10) - 100 = -3(100) + 600 - 100 = -300 + 600 - 100 = 200 \\text{ juta Rupiah} \\]"
                 }
             ]
         },
         "calculator": {
-            "title": "-",
-            "description": "-",
-            "url": "-"
+            "title": "Kalkulator Integral Tak Tentu",
+            "description": "<p>Kalkulator Integral Tak Tentu membantu menghitung antiturunan suatu fungsi secara otomatis beserta konstanta integrasi (C).</p>",
+            "url": "https://just-karen-its-her.github.io/kalkulator_8/"
         }
     },
     "group_9": {
         "profile": {
-            "pageTitle": "Anggota Kelompok 9",
-            "description": "<p></p>",
+            "pageTitle": "Anggota Kelompok IX",
+            "description": "<p>Kali ini Pematari akan membahas konsep Integral Tentu sebagai metode menghitung akumulasi nilai pada interval tertentu melalui pendekatan luas di bawah kurva. Selain itu, dijelaskan Teorema Dasar Kalkulus yang menghubungkan turunan dan integral, serta konsep luas bertanda untuk memperoleh nilai akumulasi bersih secara akurat.</p><p>Selanjutnya membahas penerapan integral dalam permodelan data kontinu untuk menghitung akumulasi proses yang berubah secara terus-menerus, seperti jarak, volume, dan laju perubahan. Selain itu, disajikan berbagai studi kasus di bidang teknologi informasi, seperti analisis penggunaan bandwidth, konsumsi energi server, dan pertumbuhan data AI, sehingga menunjukkan keunggulan integral dalam memodelkan data kontinu secara lebih akurat.</p>",
             "members": [
                 {
-                    "name": "afa",
-                    "studentId": "1062569",
+                    "name": "Apriansyah",
+                    "studentId": "1062562",
                     "major": "Teknologi Rekayasa Perangkat Lunak",
                     "photo": ""
                 },
                 {
-                    "name": "Johnatan",
-                    "studentId": "1062570",
+                    "name": "Desti Septiani",
+                    "studentId": "1062565",
                     "major": "Teknologi Rekayasa Perangkat Lunak",
                     "photo": ""
                 },
                 {
-                    "name": "asda",
-                    "studentId": "1062574",
+                    "name": "Riduan",
+                    "studentId": "1062584",
                     "major": "Teknologi Rekayasa Perangkat Lunak",
                     "photo": ""
                 },
                 {
-                    "name": "adasd",
-                    "studentId": "1062574",
+                    "name": "Fifki Putra Pratama",
+                    "studentId": "1062585",
                     "major": "Teknologi Rekayasa Perangkat Lunak",
                     "photo": ""
                 }
@@ -2028,7 +2145,8 @@
                 "",
                 "<h3>K. Model Kontinu vs Diskrit</h3><table><tr><th>Jenis</th><th>Ciri</th><th>Contoh</th></tr><tr><td>Kontinu</td><td>Berubah terus menerus</td><td>suhu, kecepatan</td></tr><tr><td>Diskret</td><td>Terpisah per data</td><td>jumlah user, transaksi</td></tr></table>",
                 "",
-                "<h3>L. Perbandingan Metode (Integral vs Diskret)</h3><h4>11.1 Pengertian Integral</h4><p>Integral adalah metode dalam matematika yang digunakan untuk menghitung total akumulasi dari suatu perubahan kecil yang terjadi secara terus menerus.</p><p>Integral sering digunakan untuk: menghitung luas daerah, mencari jarak dari kecepatan, menghitung volume, serta menentukan total perubahan suatu fungsi.</p><p><strong>Sederhananya:</strong> turunan digunakan untuk mengetahui seberapa cepat perubahan terjadi, sedangkan integral digunakan untuk mengetahui total hasil dari perubahan tersebut.</p>",
+                "<h3>L. Perbandingan Metode (Integral vs Diskret)</h3>",
+                "<h4>a. Pengertian Integral</h4><p>Integral adalah metode dalam matematika yang digunakan untuk menghitung total akumulasi dari suatu perubahan kecil yang terjadi secara terus menerus.</p><p>Integral sering digunakan untuk: menghitung luas daerah, mencari jarak dari kecepatan, menghitung volume, serta menentukan total perubahan suatu fungsi.</p><p><strong>Sederhananya:</strong> turunan digunakan untuk mengetahui seberapa cepat perubahan terjadi, sedangkan integral digunakan untuk mengetahui total hasil dari perubahan tersebut.</p>",
                 "",
                 "<h3>M. Metode Integral</h3><p>Metode integral kontinu adalah metode perhitungan yang digunakan pada data atau fungsi yang berubah secara terus menerus. Metode ini menggunakan simbol integral (\\( \\int \\)) untuk menghitung total dari suatu perubahan kecil yang terjadi secara kontinu.</p><p>Integral kontinu biasanya digunakan untuk menghitung luas daerah, jarak tempuh, volume, dan berbagai perhitungan dalam fisika maupun teknik. Dibandingkan metode diskret, metode integral kontinu menghasilkan perhitungan yang lebih akurat karena menghitung seluruh perubahan pada setiap titik.</p><h4>Rumus:</h4>\\[ \\int f(x) dx = F(x) + C \\]<table><tr><th>Simbol</th><th>Keterangan</th></tr><tr><td>\\( \\int \\)</td><td>fungsi yang akan diintegralkan</td></tr><tr><td>\\( dx \\)</td><td>diferensial (perubahan kecil variabel)</td></tr><tr><td>\\( C \\)</td><td>konstanta integral</td></tr></table><p>Konstanta ditambahkan karena turunan dari konstanta adalah nol sehingga nilai konstanta awal tidak dapat diketahui secara pasti.</p>",
                 "",
