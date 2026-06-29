@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modul Pembelajaran Interaktif Kalkulus">
+    <title>KALKULUS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+            startup: { typeset: false }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-search" id="sidebar-search-box">
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Cari materi">
+        </div>
+        <div class="sidebar-header">
+            <div class="logo-circle">
+                <img src="assets/img/logo.jpg" alt="Logo Aplikasi Kalkulus">
+            </div>
+        </div>
+        <div class="sidebar-heading">
+            <h1>KALKULUS</h1>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Navigasi Utama">
+            <ul>
+                <li><a href="#" id="link-cover" class="active">Cover</a></li>
+                <li><a href="#" id="link-introduction">Kata Pengantar</a></li>
+
+                <li>
+                    <ul class="sub-menu">
+                        <li class="section-title"><strong>BAB</strong> I Fungsi</li>
+                        <li>
+                            <a href="#" id="toggle-material-1">
+                                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i> Konsep Dasar Fungsi
+                                <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                            </a>
+                            <ul class="nested-menu collapsed" id="dropdown-material-1">
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-1">
+                                        Hubungan antar Fungsi dan Implikasi <i
+                                            class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-1">
+                                        <li><a href="#" id="link-group-profile-1"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-1"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Fungsi dan Implikasi, Contoh Soal, dan
+                                                Pembahasan</a></li>
+                                        <li><a href="#" id="link-video-1"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Pembahasan fungsi
+                                                dan implikasi</a></li>
+                                        <li><a href="#" id="link-quiz-1"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi Fungsi dan Implikasi</a></li>
+                                        <li><a href="#" id="link-calculator-1"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator Fungsi & Perubahan</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-2">
+                                        Pemodelan Fungsi dan Analisis Limit <i
+                                            class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-2">
+                                        <li><a href="#" id="link-group-profile-2"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i>Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-2"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Model Fungsi dan Limit, Contoh Soal, dan
+                                                Pembahasan</a></li>
+                                        <li><a href="#" id="link-video-2"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Model Fungsi dan Limit </a></li>
+                                        <li><a href="#" id="link-quiz-2"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi Model Fungsi dan Limit</a>
+                                        </li>
+                                        <li><a href="#" id="link-calculator-2"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator Fungsi, Laju Perubahan, dan
+                                                Limit</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="sub-menu">
+                        <li class="section-title"><strong>BAB</strong> II Limit</li>
+                        <li>
+                            <a href="#" id="toggle-material-2">
+                                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i> Konsep dan Penerapan
+                                Limit
+                                <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                            </a>
+                            <ul class="nested-menu collapsed" id="dropdown-material-2">
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-3">Definisi limit dan
+                                        stabilitas model matematis<i class="fa-solid fa-chevron-down caret-icon rotate"
+                                            aria-hidden="true"></i></a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-3">
+                                        <li><a href="#" id="link-group-profile-3"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-3"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Limit, Contoh Soal, dan Pembahasan</a></li>
+                                        <li><a href="#" id="link-video-3"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Pembahasan Mengenai Limit</a></li>
+                                        <li><a href="#" id="link-quiz-3"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Menguji Pemahaman</a></li>
+                                        <li><a href="#" id="link-calculator-3"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="sub-menu">
+                        <li class="section-title"><strong>BAB</strong> III Turunan</li>
+                        <li>
+                            <a href="#" id="toggle-material-3">
+                                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i> Konsep Dasar Turunan
+                                <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                            </a>
+                            <ul class="nested-menu collapsed" id="dropdown-material-3">
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-4">
+                                        Kelompok 4 <i class="fa-solid fa-chevron-down caret-icon rotate"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-4">
+                                        <li><a href="#" id="link-group-profile-4"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Sub Kelompok</a></li>
+                                        <li><a href="#" id="link-material-examples-4"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Materi + Contoh Soal</a></li>
+                                        <li><a href="#" id="link-video-4"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video</a></li>
+                                        <li><a href="#" id="link-quiz-4"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi</a></li>
+                                        <li><a href="#" id="link-calculator-4"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator</a></li>
+                                    </ul>
+                                </li>
+                                <!-- <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-6">
+                                        Kelompok 6 <i class="fa-solid fa-chevron-down caret-icon rotate"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-6">
+                                        <li><a href="#" id="link-group-profile-6"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Sub Kelompok</a></li>
+                                        <li><a href="#" id="link-material-examples-6"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Materi + Contoh Soal</a></li>
+                                        <li><a href="#" id="link-video-6"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video</a></li>
+                                        <li><a href="#" id="link-quiz-6"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi</a></li>
+                                        <li><a href="#" id="link-calculator-6"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-5">
+                                        Turunan Fungsi dan Aturan dasar Difernensial <i
+                                            class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-5">
+                                        <li><a href="#" id="link-group-profile-5"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-5"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i>Turunan Fungsi dan Turunan Pangkat, Contoh
+                                                Soal, dan Pembahasan</a></li>
+                                        <li><a href="#" id="link-video-5"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Turunan Fungsi</a></li>
+                                        <li><a href="#" id="link-quiz-5"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi Turunan</a></li>
+                                        <li><a href="#" id="link-calculator-5"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator Turuanan</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="sub-menu">
+                        <li class="section-title"><strong>BAB</strong> IV Aplikasi Turunan</li>
+                        <li>
+                            <a href="#" id="toggle-material-4">
+                                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i> Implementasi Aplikasi
+                                Turunan
+                                <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                            </a>
+                            <ul class="nested-menu collapsed" id="dropdown-material-4">
+                                <!-- <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-5">
+                                        Kelompok 5 <i class="fa-solid fa-chevron-down caret-icon rotate"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-5">
+                                        <li><a href="#" id="link-group-profile-5"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Sub Kelompok</a></li>
+                                        <li><a href="#" id="link-material-examples-5"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Materi + Contoh Soal</a></li>
+                                        <li><a href="#" id="link-video-5"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video</a></li>
+                                        <li><a href="#" id="link-quiz-5"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi</a></li>
+                                        <li><a href="#" id="link-calculator-5"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-6">
+                                        Diferensiasi Numerik dan Evaluasi Galat <i
+                                            class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-6">
+                                        <li><a href="#" id="link-group-profile-6"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i>Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-6"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i>Diferensiasi Numerik dan Evaluasi Galat ,
+                                                Contoh
+                                                Soal, dan Pembahasan</a></li>
+                                        <li><a href="#" id="link-video-6"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Metode Diferensiasi Numerik dan
+                                                Galat</a></li>
+                                        <li><a href="#" id="link-quiz-6"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Uji Pemahaman</a></li>
+                                        <li><a href="#" id="link-calculator-6"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator Pendekatan Numerik Turunan</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-7">
+                                        Optimisasi Matematis, Nilai Stasioner, Solusi Ekstrem, Evaluasi Solusi, dan
+                                        Turunan vs Non-Turunan
+                                        <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-7">
+                                        <li><a href="#" id="link-group-profile-7"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-7"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Aplikasi Turunan, Contoh Studi Kasus dan
+                                                Penyelesaian</a></li>
+                                        <li><a href="#" id="link-video-7"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Penjelasan Contoh Soal</a></li>
+                                        <li><a href="#" id="link-quiz-7"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Uji Pemahaman</a></li>
+                                        <li><a href="#" id="link-calculator-7"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator Aplikasi Turunan</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="sub-menu">
+                        <li class="section-title"><strong>BAB</strong> V Integral</li>
+                        <li>
+                            <a href="#" id="toggle-material-5">
+                                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>Implemenatasi Integral
+                                Tak Tentu dan Turunan
+                                <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                            </a>
+                            <ul class="nested-menu collapsed" id="dropdown-material-5">
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-8">
+                                        Kelompok 8 <i class="fa-solid fa-chevron-down caret-icon rotate"
+                                            aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-8">
+                                        <li><a href="#" id="link-group-profile-8"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Sub Kelompok</a></li>
+                                        <li><a href="#" id="link-material-examples-8"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Materi + Contoh Soal</a></li>
+                                        <li><a href="#" id="link-video-8"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video</a></li>
+                                        <li><a href="#" id="link-quiz-8"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi</a></li>
+                                        <li><a href="#" id="link-calculator-8"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul class="sub-menu">
+                        <li class="section-title"><strong>BAB</strong> VI Aplikasi Integral</li>
+                        <li>
+                            <a href="#" id="toggle-material-6">
+                                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i> Integral Tentu
+                                <i class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                            </a>
+                            <ul class="nested-menu collapsed" id="dropdown-material-6">
+                                <li class="menu-indented">
+                                    <a href="#" class="sub-menu-active" id="toggle-group-9">
+                                        Integral Tentu & Permodelan Data Kontinu <i
+                                            class="fa-solid fa-chevron-down caret-icon rotate" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="nested-menu collapsed" id="dropdown-group-9">
+                                        <li><a href="#" id="link-group-profile-9"><i class="fa-solid fa-users-rectangle"
+                                                    aria-hidden="true"></i> Mahasiswa Pemateri</a></li>
+                                        <li><a href="#" id="link-material-examples-9"><i class="fa-solid fa-file-pen"
+                                                    aria-hidden="true"></i> Integral Tentu & Permodelan Data Kontinu,
+                                                Contoh Studi Kasus dan
+                                                Penyelesaian</a></li>
+                                        <li><a href="#" id="link-video-9"><i class="fa-solid fa-circle-play"
+                                                    aria-hidden="true"></i> Video Penjelasan Lanjut</a></li>
+                                        <li><a href="#" id="link-quiz-9"><i class="fa-solid fa-list-check"
+                                                    aria-hidden="true"></i> Soal Evaluasi Integral dan Aplikasinya</a>
+                                        </li>
+                                        <li><a href="#" id="link-calculator-9"><i class="fa-solid fa-calculator"
+                                                    aria-hidden="true"></i> Kalkulator Integral Kontinu</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-wrapper">
+        <header class="top-navbar">
+            <div class="nav-left">
+                <a href="#" id="toggle-btn" title="Toggle Sidebar" aria-label="Buka/Tutup Sidebar"><i
+                        class="fa-solid fa-bars" aria-hidden="true"></i></a>
+                <a href="#" id="search-btn" title="Search" aria-label="Cari"><i class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true"></i></a>
+                <a href="#" title="Font Settings" aria-label="Pengaturan Font"><i class="fa-solid fa-font"
+                        aria-hidden="true"></i></a>
+            </div>
+            <div class="nav-center">KALKULUS</div>
+            <div class="nav-right">
+                <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"
+                        aria-hidden="true"></i></a>
+                <a href="#" title="Youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"
+                        aria-hidden="true"></i></a>
+                <a href="#" title="C" aria-label="Ikon C"><i class="fa-solid fa-c" aria-hidden="true"></i></a>
+            </div>
+        </header>
+
+        <section class="content-body">
+
+            <div id="view-cover" class="view-container">
+                <div class="book-spread">
+                    <div class="book-page">
+                        <div class="cover-page-layout">
+                            <div class="cover-image-wrapper">
+                                <img src="assets/img/foto-cover-full.jpg" alt="Ilustrasi Cover Buku Kalkulus"
+                                    class="cover-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-spine"></div>
+                    <div class="book-page">
+                        <div class="cover-page-layout">
+                            <div class="logo-circle cover-logo">
+                                <img src="assets/img/logo.jpg" alt="Logo Program Studi">
+                            </div>
+                            <h3 class="cover-prodi-label">Program Studi</h3>
+                            <h2 class="cover-prodi-name">Teknologi Rekayasa<br>Perangkat Lunak</h2>
+                            <div class="cover-divider-main"></div>
+                            <p class="cover-quote">"Kalkulus adalah ilmu yang membantu kita memahami perubahan dan
+                                pergerakan dunia"<br><strong class="cover-quote-author">MARI SUKA KALKULUS</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-introduction" class="view-container hidden">
+                <div class="book-spread">
+                    <div class="book-page">
+                        <div class="page-layout-column">
+                            <h2 class="chapter-title centered-title">KATA PENGANTAR</h2>
+                            <div class="page-content-scroll">
+                                <p class="page-text indented-text">Puji syukur kehadirat Tuhan Yang Maha Esa atas segala
+                                    rahmat dan karunia-Nya, sehingga penyusunan Modul Pembelajaran Interaktif Kalkulus
+                                    ini dapat diselesaikan dengan baik. Modul ini disusun sebagai bentuk implementasi
+                                    pemahaman teknologi informasi untuk memenuhi Tugas Besar mata kuliah Kalkulus pada
+                                    Program Studi Teknologi Rekayasa Perangkat Lunak.</p>
+                                <p class="page-text indented-text">Penyusunan aplikasi web interaktif ini tentu tidak
+                                    terlepas dari dukungan dan bimbingan berbagai pihak. Oleh karena itu, tim penyusun
+                                    mengucapkan terima kasih yang sebesar-besarnya kepada <strong>Bapak/Ibu [NAMA DOSEN
+                                        BESERTA GELAR]</strong>, selaku dosen pengampu mata kuliah Kalkulus yang telah
+                                    banyak memberikan arahan, ilmu, serta motivasi yang berharga.</p>
+                                <p class="page-text indented-text">Modul ini dirancang dengan pendekatan arsitektur data
+                                    terstruktur agar pengguna dapat memahami konsep matematika tidak hanya melalui
+                                    teori, tetapi juga melalui simulasi ujian dan alat bantu perhitungan otomatis. Kami
+                                    menyadari bahwa sistem ini masih memiliki ruang untuk penyempurnaan, oleh karena itu
+                                    kritik dan saran yang membangun sangat kami harapkan.</p>
+                                <div class="signature-section">
+                                    <p class="signature-date">Sungailiat, Juni 2026</p>
+                                    <br><br>
+                                    <p class="signature-name">Tim Penyusun</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-spine"></div>
+                    <div class="book-page">
+                        <div class="page-layout-column">
+                            <h2 class="chapter-title centered-title">PETUNJUK PENGGUNAAN</h2>
+                            <div class="page-content-scroll">
+                                <p class="page-text">Selamat datang di Modul Pembelajaran Interaktif. Agar pengalaman
+                                    eksplorasi Anda lebih optimal, silakan perhatikan panduan fitur berikut:</p>
+                                <div class="guide-list">
+                                    <div class="guide-item">
+                                        <i class="fa-solid fa-hand-pointer guide-icon" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="guide-title">1. Navigasi Cerdas</h4>
+                                            <p class="guide-desc">Anda dapat membalik halaman secara virtual dengan
+                                                mengklik tepi kertas buku, atau menggunakan <strong>Daftar Isi</strong>
+                                                interaktif di panel sebelah kiri.</p>
+                                        </div>
+                                    </div>
+                                    <div class="guide-item">
+                                        <i class="fa-solid fa-book-open guide-icon" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="guide-title">2. Eksplorasi Materi & Multimedia</h4>
+                                            <p class="guide-desc">Setiap bab dilengkapi dengan penjelasan teori secara
+                                                tekstual dan modul video terintegrasi untuk memperkuat pemahaman konsep.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="guide-item">
+                                        <i class="fa-solid fa-list-check guide-icon" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="guide-title">3. Sistem Penilaian Otomatis</h4>
+                                            <p class="guide-desc">Di akhir sesi, ujilah pemahaman Anda melalui kuis
+                                                pilihan ganda. Sistem akan mencocokkan jawaban dan menghitung skor akhir
+                                                secara <em>real-time</em>.</p>
+                                        </div>
+                                    </div>
+                                    <div class="guide-item">
+                                        <i class="fa-solid fa-calculator guide-icon" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="guide-title">4. Kalkulator Terintegrasi</h4>
+                                            <p class="guide-desc">Gunakan fitur kalkulator untuk memverifikasi dan
+                                                mensimulasikan hasil perhitungan dari formula matematika yang sedang
+                                                dibahas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-material-book" class="view-container hidden">
+                <div class="book-spread">
+
+                    <div class="book-page" id="page-left">
+                        <div id="content-left">
+                            <div id="left-page-1">
+                                <h2 class="chapter-title" id="profile-title">Memuat Profil...</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text" id="profile-description"></p>
+                                    <div class="team-list" id="team-list-container"></div>
+                                </div>
+                            </div>
+
+                            <div id="left-page-2" class="hidden">
+                                <h2 class="chapter-title" id="material-title">Memuat Materi...</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text text-preserve-lines" id="material-text"></p>
+                                </div>
+                                <div class="grafik-container">
+                                    <canvas id="grafikFungsi"></canvas>
+                                </div>
+                            </div>
+
+                            <div id="left-page-3" class="hidden">
+                                <h2 class="chapter-title" id="video-title">Memuat Video...</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text" id="video-description"></p>
+                                    <div id="video-list-container"></div>
+                                </div>
+                            </div>
+
+                            <div id="left-page-4" class="hidden">
+                                <h2 class="chapter-title" id="quiz-title">Memuat Evaluasi...</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text" id="quiz-description"></p>
+                                    <div id="quiz-container" class="page-text"></div>
+                                </div>
+                            </div>
+
+                            <div id="left-page-5" class="hidden">
+                                <h2 class="chapter-title" id="calculator-title">Memuat Kalkulator...</h2>
+                                <p class="page-text calc-desc-text" id="calculator-description"></p>
+                                <div class="calculator-container calc-left-layout">
+                                    <div id="calc-empty-state" class="calc-empty-box hidden">
+                                        <i class="fa-solid fa-calculator fa-3x" aria-hidden="true"></i>
+                                        <p class="page-text">Kalkulator untuk kelompok ini belum tersedia.</p>
+                                    </div>
+                                    <iframe id="iframe-calculator" class="calc-iframe hidden" src=""
+                                        title="Kalkulator Kelompok"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-spine"></div>
+
+                    <div class="book-page" id="page-right">
+                        <div id="content-right">
+                            <div id="right-page-1">
+                                <h2 class="section-subtitle" id="tujuan-title">Memuat Tujuan...</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text" id="tujuan-content">Memuat konten...</p>
+                                </div>
+                            </div>
+
+                            <div id="right-page-2" class="hidden">
+                                <h2 class="section-subtitle">Contoh & Pembahasan</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text" id="examples-container"></p>
+                                </div>
+                            </div>
+
+                            <div id="right-page-3" class="hidden">
+                                <h2 class="section-subtitle" id="catatan-title">Ringkasan Video</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text" id="catatan-container"></p>
+                                </div>
+                            </div>
+
+                            <div id="right-page-4" class="hidden">
+                                <h2 class="section-subtitle">Jawaban dan pembahasan</h2>
+                                <div class="page-content-scroll">
+                                    <p class="page-text">Jawabkan Soal Page Kiri Dan kirim Dibawah ini.</p>
+                                    <a href="#" class="btn-page submit-btn" id="btn-submit-quiz">Kirim Jawaban <i
+                                            class="fa-solid fa-check" aria-hidden="true"></i></a>
+                                    <div id="quiz-result-container" class="page-text"></div>
+                                </div>
+                            </div>
+
+                            <div id="right-page-5" class="hidden">
+                                <h2 class="section-subtitle">Catatan</h2>
+                                <div class="page-content-scroll lined-paper-container">
+                                    <p class="page-text">Siapkan Lembar Kosong Kamu Untuk Mencatat Hitung-hitungan Yang
+                                        Kamu Coba.</p>
+                                    <p class="page-text">Lembar Ini jangan Disentuh Ya Karena emang tidak bisa.</p>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+                                    <hr>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>
