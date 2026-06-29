@@ -162,6 +162,7 @@ body {
     overflow: hidden;
     background-color: var(--content-bg);
     font-family: var(--ui-font);
+    cursor: pointer;
 }
 
 h1,
