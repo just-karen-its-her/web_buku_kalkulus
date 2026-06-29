@@ -795,7 +795,7 @@
     "group_4": {
         "profile": {
             "pageTitle": "Anggota Kelompok IV",
-            "description": "Pada pembahasan ini, tiga pemateri akan menjelaskan konsep dasar kalkulus dan analisis fungsi secara bertahap dan terstruktur. Pemateri pertama akan membahas definisi dan aturan dasar turunan sebagai landasan utama dalam memahami perubahan nilai suatu fungsi matematis. Pemateri kedua akan menjelaskan lebih lanjut mengenai penerapan aturan turunan, termasuk aturan rantai. Selanjutnya, pemateri ketiga akan membahas analisis karakteristik fungsi melalui turunan positif dan negatif untuk menentukan interval fungsi naik dan turun secara matematis. Melalui pembagian materi ini, peserta diharapkan memperoleh pemahaman yang komprehensif mengenai penerapan turunan dan sifat fungsi.",
+            "description": "<p>Pada presentasi kali ini, materi akan dibawakan oleh tiga pemateri, di mana Pemateri akan menguraikan konsep dasar turunan menggunakan definisi limit selisih—sebagai pengukur laju perubahan dan kemiringan garis singgung—serta berbagai contoh penerapannya di kehidupan nyata. Selanjutnya, Pemateri akan berfokus pada metode analitik untuk menghitung nilai turunan secara eksak dan cepat menggunakan aturan baku seperti aturan konstanta, linear, dan pangkat. Terakhir, Pemateri akan menjelaskan metode numerik (selisih maju, mundur, dan pusat) sebagai alternatif mencari nilai pendekatan pada fungsi yang kompleks, sekaligus merangkum perbedaan fleksibilitas dan akurasi antara metode analitik dan numerik.</p>",
             "members": [
                 {
                     "name": "Triandi josua S",
@@ -819,187 +819,139 @@
         },
         "tujuan": {
             "title": "Tujuan Pembelajaran",
-            "content": "<p>Setelah mempelajari materi ini, peserta didik diharapkan mampu:</p><ul><li><strong>Menjelaskan definisi turunan fungsi</strong> sebagai laju perubahan sesaat suatu nilai terhadap variabelnya dan kaitannya dengan kemiringan garis singgung.</li><li><strong>Menerapkan aturan-aturan dasar turunan</strong>, seperti aturan konstanta, aturan pangkat, dan aturan rantai dalam menyelesaikan masalah matematis.</li><li><strong>Menganalisis karakteristik fungsi</strong> dengan menggunakan turunan pertama untuk menentukan interval di mana suatu fungsi naik atau turun.</li></ul>"
+            "content": "<p>Setelah mempelajari materi ini, peserta didik diharapkan mampu:</p><ul><li><strong>Memahami konsep fundamental turunan</strong> menggunakan definisi limit selisih, serta mampu menginterpretasikannya sebagai laju perubahan sesaat dan kemiringan garis singgung.</li><li><strong>Menghitung turunan secara eksak</strong> dengan mengaplikasikan aturan dasar pada metode analitik (seperti aturan konstanta, linear, dan pangkat) secara tepat dan cepat.</li><li><strong>Menerapkan pendekatan metode numerik</strong> (selisih maju, mundur, dan pusat) untuk memecahkan dan mencari nilai hampiran turunan pada fungsi matematika yang kompleks.</li><li><strong>Menganalisis perbedaan penggunaan</strong> antara metode analitik yang menghasilkan nilai mutlak dengan metode numerik yang menghasilkan nilai pendekatan.</li></ul>"
         },
         "material": {
             "title": "BAB III Turunan",
             "theoryContent": [
+                "<h2> Dasar Turunan</h2>",
+                "<h3>Definisi Turunan</h3>",
+                "<p><strong>Apa itu turunan?</strong> Turunan sebuah fungsi dapat didefinisikan secara formal menggunakan konsep limit selisih. Turunan mengukur laju perubahan sesaat dan kemiringan garis singgung.</p>",
+                "<p>Secara matematis, jika kita memiliki fungsi \\( f(x) \\), maka turunan dari fungsi tersebut di titik \\( x \\), yang dinotasikan dengan \\( f'(x) \\), didefinisikan sebagai:</p>",
+                "\\[ f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h} \\]",
+                "<p>Fokus dasar turunan pada pembahasan ini meliputi:</p>",
+                "<ol><li>Limit selisih</li><li>Kemiringan garis singgung</li><li>Turunan Laju perubahan</li></ol>",
+                "",
                 "<h3>A. Penerapan Turunan</h3>",
                 "<p>Turunan memiliki banyak penerapan dalam kehidupan dan berbagai bidang ilmu. Dalam matematika, turunan digunakan untuk mencari nilai maksimum dan minimum suatu fungsi. Selain itu, turunan juga digunakan untuk mengetahui perubahan suatu nilai terhadap waktu.</p><p>Contoh penerapan turunan:</p><ul><li>Menentukan kecepatan dan percepatan pada pergerakan benda.</li><li>Menentukan keuntungan maksimum dalam bidang ekonomi.</li><li>Menganalisis perubahan suatu data atau grafik.</li></ul>",
                 "",
                 "<h3>B. Metode Analitik Turunan</h3><p>Metode analitik merupakan cara mencari turunan dengan menggunakan aturan dan rumus matematika. Metode ini menghasilkan nilai turunan yang lebih tepat karena proses perhitungannya berdasarkan aturan yang sudah ditentukan.</p><p>Beberapa aturan turunan yang digunakan:</p><ol><li>Aturan konstanta: turunan dari bilangan konstan adalah 0.</li><li>Aturan pangkat: jika \\( f(x)=x^n \\) maka \\( f'(x)=nx^{n-1} \\).</li><li>Aturan penjumlahan: turunan dari jumlah fungsi sama dengan jumlah turunannya.</li></ol>",
+                "<h4>Aturan Cepat Bentuk Fungsi Turunan</h4>",
+                "<p><strong>1. Aturan Konstanta</strong><br>Jika suatu fungsi hanya berupa konstanta, maka turunannya sama dengan 0. (\\( f(x) = c \\rightarrow f'(x) = 0 \\)).<br>Contoh: \\( f(x) = 8 \\rightarrow f'(x) = 0 \\)</p>",
+                "<p><strong>2. Aturan Linear</strong><br>Jika suatu fungsi terdiri dari variabel dan konstanta tanpa adanya pangkat, maka turunannya sama dengan konstanta itu sendiri.<br>Contoh: \\( f(x) = x \\rightarrow f'(x) = 1 \\)</p>",
+                "<p><strong>Tabel TURUNAN/Diffrensial:</strong></p>",
+                "<table border=\"1\" cellpadding=\"5\" style=\"border-collapse: collapse; width: 100%; text-align: center;\"><thead><tr><th>\\( f(x) \\)</th><th>\\( f'(x) \\)</th></tr></thead><tbody><tr><td>\\( x \\)</td><td>\\( 1 \\)</td></tr><tr><td>\\( -7x \\)</td><td>\\( -7 \\)</td></tr><tr><td>\\( 5x \\)</td><td>\\( 5 \\)</td></tr><tr><td>\\( -8 \\)</td><td>\\( 0 \\)</td></tr></tbody></table>",
                 "",
                 "<h3>C. Metode Numerik Turunan</h3>",
                 "<p>Metode numerik merupakan metode perhitungan yang digunakan untuk memperoleh nilai pendekatan dari suatu permasalahan matematika. Pada turunan, metode numerik digunakan ketika fungsi sulit diturunkan secara langsung menggunakan metode analitik.</p><p>Metode ini bekerja dengan menggunakan nilai-nilai di sekitar titik yang ingin dicari sehingga menghasilkan perkiraan nilai turunan.</p><p>Rumus pendekatan turunan:</p>\\[ f'(x) \\approx \\frac{f(x+h)-f(x)}{h} \\]<p>Keterangan:</p>",
                 "<ul><li>\\( f'(x) \\) = nilai turunan pendekatan</li><li>\\( f(x+h) \\) = nilai fungsi pada titik \\( x+h \\)</li><li>\\( f(x) \\) = nilai fungsi pada titik \\( x \\)</li><li>\\( h \\) = perubahan kecil pada nilai \\( x \\)</li></ul><p>Jenis pendekatan numerik turunan yang umum digunakan:</p><ol><li>Selisih maju (Forward Difference), yaitu menggunakan nilai sekarang dan nilai setelahnya.</li><li>Selisih mundur (Backward Difference), yaitu menggunakan nilai sekarang dan nilai sebelumnya.</li><li>Selisih pusat (Central Difference), yaitu menggunakan nilai sebelum dan sesudah titik yang dicari.</li></ol><p>Kelebihan metode numerik adalah dapat digunakan pada fungsi yang kompleks. Namun, hasil yang diperoleh berupa pendekatan sehingga tingkat ketelitian bergantung pada nilai perubahan (\\( h \\)) yang digunakan.</p>",
                 "",
-                "<h3>D. Jenis Pendekatan Metode Numerik Turunan</h2>",
+                "<h3>D. Jenis Pendekatan Metode Numerik Turunan</h3>",
                 "<h4>a. Selisih Maju (Forward Difference)</h4>",
                 "<p>Selisih maju adalah metode pendekatan turunan yang menggunakan nilai fungsi pada titik sekarang dan titik setelahnya. Metode ini melihat perubahan fungsi ke arah depan dari suatu titik.</p><p>Rumus:</p>\\[ f'(x) \\approx \\frac{f(x+h)-f(x)}{h} \\]<p>Keterangan:</p><ul><li>\\( f(x+h) \\) = nilai fungsi setelah titik \\( x \\)</li><li>\\( f(x) \\) = nilai fungsi pada titik \\( x \\)</li><li>\\( h \\) = jarak perubahan nilai \\( x \\)</li></ul><p>Metode ini memiliki perhitungan sederhana, namun ketelitiannya bergantung pada nilai \\( h \\).</p>",
-                "<h4>b. Selisih Mundur (Backward Difference)</h3><p>Selisih mundur adalah metode pendekatan turunan yang menggunakan nilai fungsi pada titik sekarang dan titik sebelumnya. Metode ini melihat perubahan fungsi dari arah belakang suatu titik.</p><p>Rumus:</p>\\[ f'(x) \\approx \\frac{f(x)-f(x-h)}{h} \\]<p>Keterangan:</p><ul><li>\\( f(x) \\) = nilai fungsi pada titik \\( x \\)</li><li>\\( f(x-h) \\) = nilai fungsi sebelum titik \\( x \\)</li><li>\\( h \\) = jarak perubahan nilai \\( x \\)</li></ul><p>Metode ini digunakan ketika nilai fungsi setelah titik \\( x \\) sulit diperoleh.</p>",
-                "<h4>c. Selisih Pusat (Central Difference)</h3><p>Selisih pusat adalah metode pendekatan turunan yang menggunakan nilai fungsi sebelum dan sesudah titik \\( x \\). Metode ini menghitung perubahan dari dua arah sehingga hasilnya biasanya lebih akurat dibandingkan selisih maju dan mundur.</p><p>Rumus:</p>\\[ f'(x) \\approx \\frac{f(x+h)-f(x-h)}{2h} \\]<p>Keterangan:</p><ul><li>\\( f(x+h) \\) = nilai fungsi setelah titik \\( x \\)</li><li>\\( f(x-h) \\) = nilai fungsi sebelum titik \\( x \\)</li><li>\\( 2h \\) = jarak total antara dua titik</li></ul><p>Metode selisih pusat memiliki tingkat kesalahan yang lebih kecil sehingga hasil pendekatannya lebih mendekati nilai sebenarnya.</p>",
+                "<h4>b. Selisih Mundur (Backward Difference)</h4><p>Selisih mundur adalah metode pendekatan turunan yang menggunakan nilai fungsi pada titik sekarang dan titik sebelumnya. Metode ini melihat perubahan fungsi dari arah belakang suatu titik.</p><p>Rumus:</p>\\[ f'(x) \\approx \\frac{f(x)-f(x-h)}{h} \\]<p>Keterangan:</p><ul><li>\\( f(x) \\) = nilai fungsi pada titik \\( x \\)</li><li>\\( f(x-h) \\) = nilai fungsi sebelum titik \\( x \\)</li><li>\\( h \\) = jarak perubahan nilai \\( x \\)</li></ul><p>Metode ini digunakan ketika nilai fungsi setelah titik \\( x \\) sulit diperoleh.</p>",
+                "<h4>c. Selisih Pusat (Central Difference)</h4><p>Selisih pusat adalah metode pendekatan turunan yang menggunakan nilai fungsi sebelum dan sesudah titik \\( x \\). Metode ini menghitung perubahan dari dua arah sehingga hasilnya biasanya lebih akurat dibandingkan selisih maju dan mundur.</p><p>Rumus:</p>\\[ f'(x) \\approx \\frac{f(x+h)-f(x-h)}{2h} \\]<p>Keterangan:</p><ul><li>\\( f(x+h) \\) = nilai fungsi setelah titik \\( x \\)</li><li>\\( f(x-h) \\) = nilai fungsi sebelum titik \\( x \\)</li><li>\\( 2h \\) = jarak total antara dua titik</li></ul><p>Metode selisih pusat memiliki tingkat kesalahan yang lebih kecil sehingga hasil pendekatannya lebih mendekati nilai sebenarnya.</p>",
                 "",
                 "<h3>E. Perbedaan Metode Analitik dan Numerik</h3><p>Metode analitik menggunakan rumus matematika secara langsung sehingga hasilnya lebih akurat. Sedangkan metode numerik menggunakan pendekatan nilai sehingga lebih fleksibel untuk permasalahan yang kompleks.</p>",
-                "<h4>Kesimpulan</h2><p>Turunan merupakan konsep penting dalam kalkulus yang membantu mengetahui perubahan suatu fungsi. Dengan memahami penerapan turunan, metode analitik, dan metode numerik, berbagai permasalahan dapat diselesaikan dengan lebih mudah.</p>"
+                "<h4>Kesimpulan</h4><p>Turunan merupakan konsep penting dalam kalkulus yang membantu mengetahui perubahan suatu fungsi. Dengan memahami penerapan turunan, metode analitik, dan metode numerik, berbagai permasalahan dapat diselesaikan dengan lebih mudah.</p>"
             ],
             "examples": [
                 {
-                    "question": "<b>Contoh Aturan Pangkat:</b><br>Tentukan turunan dari \\( f(x) = 2x^5 \\)",
-                    "discussion": "\\( f'(x) = 5 \\cdot 2x^{5-1} \\)<br>\\( f'(x) = 10x^4 \\)"
+                    "question": "<h3>Turunan</h3><h4>contoh</h4><p>Tentukan turunan dari fungsi berikut, \\( f(x) = 4x + 6 \\) gunakan definisi turunan.</p>",
+                    "discussion": "<p><strong>Jawaban:</strong></p><ul><li><p>Substitusikan ke \\( x \\) pada \\( f(x) \\) :</p>\\[ f'(x) = \\lim_{h \\to 0} \\frac{(4(x + h) + 6) - (4x + 6)}{h} \\]</li><li><p>Jabarkan yang sudah disubstitusikan :</p>\\[ f'(x) = \\lim_{h \\to 0} \\frac{(4x + 4h + 6) - 4x - 6}{h} \\]</li><li><p>Coret suku yang saling meniadakan \\( 4x - 4x \\) dan \\( 6 - 6 \\) :</p>\\[ f'(x) = \\lim_{h \\to 0} \\frac{4h}{h} \\]</li><li><p>Sederhanakan :</p>\\[ f'(x) = \\lim_{h \\to 0} 4 = 4 \\]</li></ul>"
                 },
                 {
-                    "question": "<b>Contoh Aturan Rantai:</b><br>Tentukan turunan dari \\( f(x) = (2x+5)^4 \\)",
-                    "discussion": "Misal \\( u = 2x+5 \\), maka \\( u' = 2 \\).<br>\\( f'(x) = 4 \\cdot 2 \\cdot (2x+5)^{4-1} \\)<br>\\( f'(x) = 8(2x+5)^3 \\)"
+                    "question": "<h3>Interpretasi Geometris (Kemiringan Garis Singgung)</h3><h4>Contoh</h4><p>Diberikan sebuah fungsi kurva :</p>\\[ f(x) = x^2 + 3x \\]<p>Tentukan kemiringan garis singgung pada kurva di titik \\( x = 2 \\) menggunakan rumus definisi limit selisih dasar :</p>\\[ m = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h} \\]",
+                    "discussion": "<p><strong>Jawab:</strong></p><ul><li><p>Tentukan nilai \\( f(x) \\) dan \\( f(x + h) \\) pada titik (\\( x = 2 \\))</p>\\[ f(x) = f(2) = (2)^2 + 3(2) = 4 + 6 = 10 \\]<br>\\[ f(x + h) = f(2 + h) = (2 + h)^2 + 3(2 + h) \\]<br>\\[ f(2 + h) = (4 + 4h + h^2) + (6 + 3h) \\]<br>\\[ f(2 + h) = h^2 + 7h + 10 \\]</li><li><p>Substitusikan nilai :</p>\\[ m = \\lim_{h \\to 0} \\frac{(h^2 + 7h + 10) - 10}{h} \\]</li><li><p>Kurangi konstanta di pembilang :</p>\\[ m = \\lim_{h \\to 0} \\frac{h^2 + 7h}{h} \\]</li><li><p>Faktorkan \\( h \\) :</p>\\[ m = \\lim_{h \\to 0} \\frac{h(h + 7)}{h} \\]<br>\\[ m = \\lim_{h \\to 0} (h + 7) \\]<br>\\[ m = 0 + 7 \\]<br>\\[ m = 7 \\]</li></ul>"
                 },
                 {
-                    "question": "<b>Contoh Aturan Perkalian:</b><br>Tentukan turunan dari \\( f(x) = x^3(2x-4) \\)",
-                    "discussion": "\\( u = x^3 \\rightarrow u' = 3x^2 \\) dan \\( v = 2x-4 \\rightarrow v' = 2 \\).<br>\\( f'(x) = (3x^2)(2x-4) + (x^3)(2) \\)<br>\\( f'(x) = 6x^3 - 12x^2 + 2x^3 \\)<br>\\( f'(x) = 8x^3 - 12x^2 \\)"
-                },
-                {
-                    "question": "<b>Contoh Aturan Pembagian:</b><br>Tentukan turunan dari \\( f(x) = \\frac{x^3}{x-2} \\)",
-                    "discussion": "\\( u = x^3 \\rightarrow u' = 3x^2 \\) dan \\( v = x-2 \\rightarrow v' = 1 \\).<br>\\( f'(x) = \\frac{(3x^2)(x-2) - (x^3)(1)}{(x-2)^2} \\)<br>\\( f'(x) = \\frac{3x^3 - 6x^2 - x^3}{(x-2)^2} \\)<br>\\( f'(x) = \\frac{2x^3 - 6x^2}{(x-2)^2} \\)"
-                },
-                {
-                    "question": "<b>Contoh Transformasi Eksponensial:</b><br>Tentukan turunan dari \\( f(x) = 4x^5 - \\frac{2}{x^3} + \\sqrt{x} \\)",
-                    "discussion": "Ubah ke bentuk pangkat: \\( f(x) = 4x^5 - 2x^{-3} + x^{1/2} \\)<br>\\( f'(x) = (4 \\cdot 5)x^4 - (2 \\cdot -3)x^{-4} + (1/2)x^{-1/2} \\)<br>\\( f'(x) = 20x^4 + 6x^{-4} + \\frac{1}{2}x^{-1/2} \\)<br>\\( f'(x) = 20x^4 + \\frac{6}{x^4} + \\frac{1}{2\\sqrt{x}} \\)"
-                },
-                {
-                    "question": "<b>Contoh Turunan Positif & Negatif:</b><br>Tentukan interval naik & turun dari \\( f(x) = 2x^2 - 10x + 5 \\)",
-                    "discussion": "\\( f'(x) = 4x - 10 \\).<br>Titik kritis: \\( 4x - 10 = 0 \\rightarrow x = 2,5 \\).<br>Uji interval:<br>- Jika \\( x > 2,5 \\) (misal x=3): \\( f'(3) = 4(3)-10 = 2 \\) (Positif/Naik).<br>- Jika \\( x < 2,5 \\) (misal x=2): \\( f'(2) = 4(2)-10 = -2 \\) (Negatif/Turun)."
+                    "question": "<h3>Turunan Sebagai Laju Perubahan</h3><h4>Laju perubahan Sesaat</h4><p>Definisi turunan sebagai laju perubahan adalah salah satu aplikasi paling mendasar dalam kalkulus. Jika turunan secara geometris adalah \"gradien garis singgung\", maka secara fungsional turunan adalah laju perubahan sesaat dari suatu variabel terhadap variabel lainnya.</p><p>Rumus dasar turunan:</p>\\[ f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h} \\]<p><strong>Contoh:</strong></p><p>Berapakah laju perubahan sesaat pada fungsi : \\( f(x) = 4x + 6 \\) tepat pada saat \\( x = 2 \\)?</p>",
+                    "discussion": "<p><strong>Jawab:</strong></p><ul><li><p>Tentukan \\( f(x) \\) dan \\( f(x+h) \\) pada saat \\( x = 2 \\):</p>\\[ f(2) = 4(2) + 6 = 8 + 6 = 14 \\]<br>\\[ f(2+h) = 4(2+h) + 6 = 8 + 4h + 6 = 14 + 4h \\]</li><li><p>Substitusikan ke dalam rumus dasar turunan:</p>\\[ f'(2) = \\lim_{h \\to 0} \\frac{f(2+h) - f(2)}{h} \\]<br>\\[ f'(2) = \\lim_{h \\to 0} \\frac{(14 + 4h) - 14}{h} \\]</li><li><p>Kurangi konstanta dan sederhanakan:</p>\\[ f'(2) = \\lim_{h \\to 0} \\frac{4h}{h} \\]<br>\\[ f'(2) = \\lim_{h \\to 0} 4 = 4 \\]</li></ul><p>Jadi, laju perubahan sesaatnya adalah <strong>4</strong>.</p>"
                 }
             ]
         },
         "videos": [
             {
-                "title": "Turunan Fungsi",
-                "description": "<p>Simak video berikut untuk memahami lebih lanjut mengenai definisi turunan, aturan pangkat, dan cara menentukan interval fungsi naik atau turun.</p>",
-                "youtubeUrl": "https://www.youtube.com/embed/3nMYH1l8pnw?si=7EWLBSQ3P926WHqQ"
+                "title": "Turunan Dan metode Numerik",
+                "description": "<p>-</p>",
+                "youtubeUrl": "https://www.youtube.com/embed/"
             }
         ],
         "catatan": {
             "title": "Catatan Penting",
             "content": [
-                "<p>Saat mengerjakan soal turunan, harap perhatikan hal-hal berikut:</p>",
-                "<ul>",
-                "<li><strong>Penamaan Fungsi:</strong> Tetap konsisten menggunakan notasi standar \\( f(x) \\) dan turunannya \\( f'(x) \\).</li>",
-                "<li><strong>Operasi Pangkat Negatif atau Pecahan:</strong> Ingat bahwa \\( \\frac{1}{x^n} = x^{-n} \\) dan bentuk akar seperti \\( \\sqrt{x} = x^{1/2} \\). Konversikan bentuk pecahan atau akar ke pangkat sebelum diturunkan.</li>",
-                "<li><strong>Menganalisis Interval:</strong> Langkah pertama untuk menentukan fungsi naik/turun selalu diawali dengan mencari <strong>titik kritis</strong> dengan menyetel \\( f'(x) = 0 \\), kemudian menguji nilai \\( x \\) di sekitarnya.</li>",
-                "</ul>"
+                "<p></p>"
             ]
         },
         "quiz": {
             "title": "Evaluasi Pemahaman",
-            "description": "Uji pemahamanmu mengenai Definisi Turunan Fungsi dengan menjawab pertanyaan berikut ini.",
+            "description": "Turunan",
             "questionsList": [
                 {
-                    "questionText": "Jika \\( f(x) = 25 \\), berapakah nilai dari \\( f'(x) \\)?",
+                    "questionText": "<strong>Kasus Sistem Robotika Manufaktur</strong><br><br>Sebuah tim engineer di perusahaan manufaktur sedang memprogram lengan robot industri. Pergerakan ujung lengan robot tersebut saat memotong pelat baja mengikuti kurva dengan persamaan fungsi \\( f(x) = 2x^2 - 4x + 5 \\). Agar mekanisme laser pemotong bekerja dengan tingkat presisi tinggi saat lengan berada di koordinat absis \\( x = 3 \\), sistem algoritma harus menghitung kemiringan garis singgung (gradien) pada titik tersebut dan menentukan persamaan garis singgungnya. Tentukan nilai kemiringan dan persamaan garis singgung pada titik tersebut berdasarkan konsep turunan!",
                     "options": {
-                        "A": "25",
-                        "B": "1",
-                        "C": "0",
-                        "D": "25x"
-                    },
-                    "correctAnswer": "C",
-                    "explanation": "Menurut aturan konstanta, jika fungsi berupa angka tanpa variabel \\( x \\), maka laju perubahannya adalah nol. Maka \\( f'(x) = 0 \\)."
-                },
-                {
-                    "questionText": "Tentukan turunan pertama dari \\( f(x) = x^6 \\)",
-                    "options": {
-                        "A": "x^5",
-                        "B": "6x^6",
-                        "C": "5x^6",
-                        "D": "6x^5"
-                    },
-                    "correctAnswer": "D",
-                    "explanation": "Gunakan aturan pangkat \\( f(x) = ax^n \\implies f'(x) = n \\cdot ax^{n-1} \\). Untuk \\( x^6 \\), maka pangkat 6 turun ke depan dan pangkat berkurang satu: \\( 6x^{6-1} = 6x^5 \\)."
-                },
-                {
-                    "questionText": "Tentukan turunan pertama dari \\( f(x) = 4x^3 \\)",
-                    "options": {
-                        "A": "12x^2",
-                        "B": "4x^2",
-                        "C": "3x^2",
-                        "D": "12x^3"
+                        "A": "\\( m = 8 \\) dan persamaan garis singgung \\( y = 8x - 13 \\)",
+                        "B": "\\( m = 8 \\) dan persamaan garis singgung \\( y = 8x + 13 \\)",
+                        "C": "\\( m = 12 \\) dan persamaan garis singgung \\( y = 12x - 25 \\)",
+                        "D": "\\( m = 4 \\) dan persamaan garis singgung \\( y = 4x - 1 \\)"
                     },
                     "correctAnswer": "A",
-                    "explanation": "Kalikan pangkat (3) dengan koefisien (4) dan kurangi pangkatnya dengan satu: \\( f'(x) = 3 \\cdot 4x^{3-1} = 12x^2 \\)."
+                    "explanation": "<strong>Jawaban:</strong><br>Pertama, cari koordinat y atau nilai \\( f(x) \\) pada saat \\( x = 3 \\):<br>\\[ f(3) = 2(3)^2 - 4(3) + 5 = 18 - 12 + 5 = 11 \\]<br>Titik singgungnya adalah koordinat \\( (3, 11) \\).<br><br>Lalu, tentukan fungsi turunan pertama \\( f'(x) \\) yang merepresentasikan fungsi kemiringan menggunakan aturan cepat turunan:<br>\\[ f'(x) = 2(2)x^{2-1} - 4 = 4x - 4 \\]<br>Kemiringan (\\( m \\)) pada \\( x = 3 \\):<br>\\[ m = f'(3) = 4(3) - 4 = 12 - 4 = 8 \\]<br><br>Gunakan rumus persamaan garis lurus \\( y - y_1 = m(x - x_1) \\) untuk mencari persamaan garis singgung:<br>\\[ y - 11 = 8(x - 3) \\]<br>\\[ y = 8x - 24 + 11 \\]<br>\\[ y = 8x - 13 \\]"
                 },
                 {
-                    "questionText": "Tentukan turunan dari \\( f(x) = x^2 + 5x - 8 \\)",
+                    "questionText": "<strong>Kasus Monitoring Pertumbuhan Pertanian Cerdas (Smart Agriculture)</strong><br><br>Sebuah sistem <em>smart agriculture</em> memantau tinggi bibit tanaman transgenik secara <em>real-time</em> menggunakan sensor IoT. Model matematika dari tinggi tanaman (dalam cm) terhadap waktu (\\( t \\) dalam minggu) dirumuskan dengan fungsi polinomial \\( h(t) = \\frac{1}{3}t^3 - 2t^2 + 8t + 10 \\). Berdasarkan hasil riset laboratorium botani, pemberian nutrisi suntikan tambahan akan memberikan hasil paling maksimal jika disemprotkan tepat pada saat laju pertumbuhan sesaat (kecepatan pertumbuhan) tanaman berada tepat pada angka \\( 4 \\text{ cm/minggu} \\). Pada minggu ke berapakah nutrisi tambahan tersebut harus disuntikkan?",
                     "options": {
-                        "A": "x + 5",
-                        "B": "2x + 5",
-                        "C": "2x - 8",
-                        "D": "2x"
+                        "A": "Minggu ke-2",
+                        "B": "Minggu ke-3",
+                        "C": "Minggu ke-4",
+                        "D": "Minggu ke-1"
+                    },
+                    "correctAnswer": "A",
+                    "explanation": "<strong>Jawaban:</strong><br>Laju perubahan sesaat adalah turunan pertama dari fungsi posisi/tinggi, yaitu \\( h'(t) \\). Menggunakan aturan turunan polinomial:<br>\\[ h'(t) = 3\\left(\\frac{1}{3}\\right)t^{3-1} - 2(2)t^{2-1} + 8 \\]<br>\\[ h'(t) = t^2 - 4t + 8 \\]<br><br>Diketahui target laju pertumbuhan sesaat yang dicari adalah \\( 4 \\text{ cm/minggu} \\), maka kita substitusikan \\( h'(t) = 4 \\):<br>\\[ 4 = t^2 - 4t + 8 \\]<br>\\[ 0 = t^2 - 4t + 8 - 4 \\]<br>\\[ t^2 - 4t + 4 = 0 \\]<br><br>Cari akar-akar persamaan kuadrat tersebut dengan cara memfaktorkannya:<br>\\[ (t - 2)(t - 2) = 0 \\]<br>\\[ t = 2 \\]<br>Jadi, laju pertumbuhan sesaat tepat bernilai \\( 4 \\text{ cm/minggu} \\) pada minggu ke-2."
+                },
+                {
+                    "questionText": "<strong>Monitoring CPU Server (Selisih Maju)</strong><br><br>Sebuah sistem monitoring server memiliki fungsi penggunaan CPU \\( f(t) = t^2 + 6t + 10 \\). Tentukan perubahan CPU pada \\( t = 4 \\) dengan metode selisih maju \\( h = 0,1 \\).",
+                    "options": {
+                        "A": "12,1",
+                        "B": "14,1",
+                        "C": "16,1",
+                        "D": "18,1"
                     },
                     "correctAnswer": "B",
-                    "explanation": "Turunkan setiap suku satu per satu: turunan \\( x^2 \\) adalah \\( 2x \\), turunan \\( 5x \\) adalah \\( 5 \\), dan turunan \\( -8 \\) adalah 0. Hasilnya: \\( 2x + 5 \\)."
+                    "explanation": "<strong>Jawaban:</strong><br>Metode selisih maju (<em>forward difference</em>) dirumuskan dengan:<br>\\[ f'(t) \\approx \\frac{f(t+h) - f(t)}{h} \\]<br>Diketahui \\( t = 4 \\) dan \\( h = 0,1 \\):<br><br>1. Cari nilai \\( f(t) \\):<br>\\[ f(4) = (4)^2 + 6(4) + 10 = 16 + 24 + 10 = 50 \\]<br>2. Cari nilai \\( f(t+h) \\):<br>\\[ f(4,1) = (4,1)^2 + 6(4,1) + 10 = 16,81 + 24,6 + 10 = 51,41 \\]<br>3. Substitusikan ke dalam rumus:<br>\\[ f'(4) \\approx \\frac{51,41 - 50}{0,1} = \\frac{1,41}{0,1} = 14,1 \\]"
                 },
                 {
-                    "questionText": "Tentukan turunan dari \\( f(x) = \\frac{1}{x^2} \\)",
+                    "questionText": "<strong>Trafik Jaringan (Selisih Mundur)</strong><br><br>Sebuah aplikasi jaringan memiliki jumlah paket \\( P(t) = t^2 + 8t + 5 \\). Hitung perubahan trafik pada \\( t = 5 \\) menggunakan selisih mundur \\( h = 1 \\).",
                     "options": {
-                        "A": "-2x^{-3}",
-                        "B": "2x^{-3}",
-                        "C": "-1/x",
-                        "D": "-2x^{-1}"
-                    },
-                    "correctAnswer": "A",
-                    "explanation": "Ubah ke bentuk pangkat: \\( f(x) = x^{-2} \\). Turunkan: \\( -2 \\cdot x^{-2-1} = -2x^{-3} \\)."
-                },
-                {
-                    "questionText": "Tentukan turunan pertama dari fungsi \\( f(x) = (2x+3)^2 \\)",
-                    "options": {
-                        "A": "4x + 6",
-                        "B": "4x + 3",
-                        "C": "8x + 12",
-                        "D": "8x + 6"
+                        "A": "12",
+                        "B": "15",
+                        "C": "17",
+                        "D": "20"
                     },
                     "correctAnswer": "C",
-                    "explanation": "Menggunakan aturan rantai: Turunkan pangkatnya \\( 2(2x+3)^1 \\) dikalikan dengan turunan di dalam kurung (yaitu 2). \\( 2(2x+3) \\cdot 2 = 4(2x+3) = 8x + 12 \\)."
+                    "explanation": "<strong>Jawaban:</strong><br>Metode selisih mundur (<em>backward difference</em>) dirumuskan dengan:<br>\\[ P'(t) \\approx \\frac{P(t) - P(t-h)}{h} \\]<br>Diketahui \\( t = 5 \\) dan \\( h = 1 \\):<br><br>1. Cari nilai \\( P(t) \\):<br>\\[ P(5) = (5)^2 + 8(5) + 5 = 25 + 40 + 5 = 70 \\]<br>2. Cari nilai \\( P(t-h) \\):<br>\\[ P(4) = (4)^2 + 8(4) + 5 = 16 + 32 + 5 = 53 \\]<br>3. Substitusikan ke dalam rumus:<br>\\[ P'(5) \\approx \\frac{70 - 53}{1} = \\frac{17}{1} = 17 \\]"
                 },
                 {
-                    "questionText": "Tentukan turunan dari \\( f(x) = 2x^3 - 4x^2 + 7 \\)",
+                    "questionText": "<strong>Kecepatan Akses Aplikasi (Selisih Pusat)</strong><br><br>Sebuah aplikasi memiliki fungsi kecepatan \\( V(t) = t^2 + 3t + 7 \\). Dengan metode selisih pusat \\( h = 0,1 \\) pada \\( t = 6 \\), hasil pendekatan turunan adalah...",
                     "options": {
-                        "A": "6x^2 - 4x",
-                        "B": "6x^2 - 8x",
-                        "C": "2x^2 - 8x",
-                        "D": "6x^2 - 8x + 7"
-                    },
-                    "correctAnswer": "B",
-                    "explanation": "Turunkan setiap suku: \\( 2x^3 \\) menjadi \\( 6x^2 \\), \\( -4x^2 \\) menjadi \\( -8x \\), dan konstanta 7 menjadi 0. Hasilnya \\( 6x^2 - 8x \\)."
-                },
-                {
-                    "questionText": "Tentukan interval fungsi naik untuk \\( f(x) = x^2 - 2x \\)",
-                    "options": {
-                        "A": "x > 1",
-                        "B": "x < 1",
-                        "C": "x > 2",
-                        "D": "x < 2"
-                    },
-                    "correctAnswer": "A",
-                    "explanation": "Hitung turunan: \\( f'(x) = 2x - 2 \\). Fungsi naik jika \\( f'(x) > 0 \\), maka \\( 2x - 2 > 0 \\implies 2x > 2 \\implies x > 1 \\)."
-                },
-                {
-                    "questionText": "Tentukan interval fungsi turun untuk \\( f(x) = -x^2 + 4x \\)",
-                    "options": {
-                        "A": "x > 2",
-                        "B": "x < 2",
-                        "C": "x > 4",
-                        "D": "x < 4"
-                    },
-                    "correctAnswer": "A",
-                    "explanation": "Hitung turunan: \\( f'(x) = -2x + 4 \\). Fungsi turun jika \\( f'(x) < 0 \\). \\( -2x + 4 < 0 \\implies -2x < -4 \\implies x > 2 \\) (Ingat tanda pertidaksamaan berubah saat dibagi bilangan negatif)."
-                },
-                {
-                    "questionText": "Apa arti dari \\( f'(x) = 0 \\) dalam analisis fungsi?",
-                    "options": {
-                        "A": "Fungsi sedang naik",
-                        "B": "Fungsi sedang turun",
-                        "C": "Titik stasioner (datar)",
-                        "D": "Fungsi tidak terdefinisi"
+                        "A": "10",
+                        "B": "12",
+                        "C": "15",
+                        "D": "18"
                     },
                     "correctAnswer": "C",
-                    "explanation": "Nilai turunan yang sama dengan nol menunjukkan bahwa laju perubahan sesaat adalah nol, yang berarti grafik berada pada kondisi datar atau titik stasioner (bisa berupa puncak atau lembah)."
+                    "explanation": "<strong>Jawaban:</strong><br>Metode selisih pusat (<em>central difference</em>) dirumuskan dengan:<br>\\[ V'(t) \\approx \\frac{V(t+h) - V(t-h)}{2h} \\]<br>Diketahui \\( t = 6 \\) dan \\( h = 0,1 \\):<br><br>1. Cari nilai \\( V(t+h) \\):<br>\\[ V(6,1) = (6,1)^2 + 3(6,1) + 7 = 37,21 + 18,3 + 7 = 62,51 \\]<br>2. Cari nilai \\( V(t-h) \\):<br>\\[ V(5,9) = (5,9)^2 + 3(5,9) + 7 = 34,81 + 17,7 + 7 = 59,51 \\]<br>3. Substitusikan ke dalam rumus:<br>\\[ V'(6) \\approx \\frac{62,51 - 59,51}{2(0,1)} = \\frac{3,00}{0,2} = 15 \\]"
+                },
+                {
+                    "questionText": "<strong>Pemilihan Metode Numerik</strong><br><br>Sebuah sistem IoT ingin menghitung perubahan data sensor dengan hasil paling akurat. Metode yang paling tepat adalah...",
+                    "options": {
+                        "A": "Selisih maju",
+                        "B": "Selisih mundur",
+                        "C": "Selisih pusat",
+                        "D": "Semua sama"
+                    },
+                    "correctAnswer": "C",
+                    "explanation": "<strong>Jawaban:</strong><br><strong>Selisih pusat</strong> (<em>Central Difference</em>).<br><br><strong>Penjelasan:</strong><br>Metode selisih pusat menggunakan titik data sebelum dan sesudah titik yang dihitung. Hal ini menghitung perubahan dari dua arah sehingga rentang kesalahannya (galat pemotongan) jauh lebih kecil (orde pangkat dua) dibandingkan dengan metode selisih maju dan selisih mundur. Karena tingkat kesalahannya terkecil, maka pendekatannya adalah yang paling mendekati nilai turunan eksak/sebenarnya."
                 }
             ]
         },
