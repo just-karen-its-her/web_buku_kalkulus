@@ -29,6 +29,24 @@ if (toggleBtn && sidebar) {
         e.preventDefault();
         sidebar.classList.toggle('active');
     });
+
+    // Menutup sidebar jika user meng-klik area di luar sidebar
+    document.addEventListener('click', e => {
+
+        // --- TAMBAHAN: Cek apakah ini layar kecil (misal: lebar maksimal 768px) ---
+        if (window.innerWidth <= 768) {
+
+            const isSidebarActive = sidebar.classList.contains('active');
+            const isClickOutsideSidebar = !sidebar.contains(e.target);
+            const isClickOutsideToggleBtn = !toggleBtn.contains(e.target);
+
+            // Jika sidebar aktif, dan yang diklik bukan sidebar & bukan tombol toggle
+            if (isSidebarActive && isClickOutsideSidebar && isClickOutsideToggleBtn) {
+                sidebar.classList.remove('active');
+            }
+
+        }
+    });
 }
 
 // 1B. Navbar Atas
