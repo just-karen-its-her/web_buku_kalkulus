@@ -798,7 +798,7 @@
             "description": "<p>Pada presentasi kali ini, materi akan dibawakan oleh tiga pemateri, di mana Pemateri akan menguraikan konsep dasar turunan menggunakan definisi limit selisih—sebagai pengukur laju perubahan dan kemiringan garis singgung—serta berbagai contoh penerapannya di kehidupan nyata. Selanjutnya, Pemateri akan berfokus pada metode analitik untuk menghitung nilai turunan secara eksak dan cepat menggunakan aturan baku seperti aturan konstanta, linear, dan pangkat. Terakhir, Pemateri akan menjelaskan metode numerik (selisih maju, mundur, dan pusat) sebagai alternatif mencari nilai pendekatan pada fungsi yang kompleks, sekaligus merangkum perbedaan fleksibilitas dan akurasi antara metode analitik dan numerik.</p>",
             "members": [
                 {
-                    "name": "Triandi josua S",
+                    "name": "Triandi josua Stompul",
                     "studentId": "1062588",
                     "major": "Teknologi Rekayasa Perangkat Lunak",
                     "photo": ""
