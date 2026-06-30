@@ -1680,9 +1680,40 @@ h4 {
 }
 
 /* =====================================================================
-   15. KUMPULAN MEDIA QUERIES (RESPONSIVE DESIGN)
+   15. KUMPULAN MEDIA QUERIES (RESPONSIVE DESIGN) - LENGKAP
    ===================================================================== */
-/* --- 1. LAYAR BESAR & LAPTOP KECIL (Maksimal 1200px) --- */
+
+/* --- 1. LAYAR SANGAT BESAR (4K, Ultra-Wide, Monitor > 1600px) --- */
+@media (min-width: 1601px) {
+    .book-spread {
+        max-width: 2400px;
+    }
+
+    .page-text {
+        font-size: 15px;
+        /* Teks sedikit lebih besar agar mudah dibaca di layar raksasa */
+        line-height: 2;
+    }
+
+    .cover-prodi-label {
+        font-size: 42px;
+    }
+}
+
+/* --- 2. LAYAR DESKTOP STANDAR & LAPTOP (Maksimal 1400px) --- */
+@media (max-width: 1400px) {
+    .book-spread {
+        max-width: 95%;
+        /* Memberikan sedikit ruang di sisi kiri-kanan meja */
+    }
+
+    .book-page:first-of-type,
+    .book-page:last-of-type {
+        padding: 60px 40px 40px 40px;
+    }
+}
+
+/* --- 3. LAYAR LAPTOP KECIL (Maksimal 1200px) --- */
 @media (max-width: 1200px) {
     :root {
         --sidebar-width: 320px;
@@ -1704,7 +1735,7 @@ h4 {
     }
 }
 
-/* --- 2. TABLET LANDSCAPE & LAYAR MENENGAH (Maksimal 992px) --- */
+/* --- 4. TABLET LANDSCAPE & LAYAR MENENGAH (Maksimal 992px) --- */
 @media (max-width: 992px) {
     .book-spread {
         flex-direction: column;
@@ -1732,6 +1763,7 @@ h4 {
         overflow-y: visible;
     }
 
+    /* Perubahan Struktur Sidebar & Navigasi */
     .sidebar {
         position: fixed;
         top: 0;
@@ -1753,9 +1785,19 @@ h4 {
         padding-top: 15px;
         padding-bottom: 20px;
     }
+
+    /* Cover disesuaikan agar tidak terlalu memanjang */
+    #view-cover {
+        min-height: auto;
+    }
+
+    .cover-img {
+        border-radius: 4px 4px 0 0;
+        /* Mengubah radius karena layout menjadi vertikal */
+    }
 }
 
-/* --- 3. TABLET PORTRAIT & HP LAYAR BESAR (Maksimal 768px) --- */
+/* --- 5. TABLET PORTRAIT & HP LAYAR BESAR (Maksimal 768px) --- */
 @media (max-width: 768px) {
     :root {
         --sidebar-width: 280px;
@@ -1814,7 +1856,7 @@ h4 {
     }
 }
 
-/* --- 4. SMARTPHONE / LAYAR HP (Maksimal 576px) --- */
+/* --- 6. SMARTPHONE STANDAR (Maksimal 576px) --- */
 @media (max-width: 576px) {
     .top-navbar {
         padding: 0 10px;
@@ -1838,7 +1880,8 @@ h4 {
     .page-text {
         font-size: 13px;
         line-height: 1.6;
-        text-indent: 20px;
+        text-indent: 15px;
+        /* Sedikit dikurangi agar teks tidak terlalu menjorok di layar sempit */
     }
 
     .quiz-nav-btn {
@@ -1847,6 +1890,7 @@ h4 {
         font-size: 1rem;
     }
 
+    /* Memaksa tabel agar bisa di-scroll secara horizontal di HP */
     #examples-container table,
     #material-text table {
         display: block;
@@ -1856,5 +1900,103 @@ h4 {
 
     .calc-iframe {
         height: 450px;
+    }
+}
+
+/* --- 7. SMARTPHONE KECIL (Maksimal 400px) --- */
+@media (max-width: 400px) {
+
+    .book-page:first-of-type,
+    .book-page:last-of-type {
+        padding: 20px 15px;
+        /* Ruang lebih padat */
+    }
+
+    .chapter-title {
+        font-size: 15px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .btn-page {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .cover-prodi-label {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .cover-prodi-name {
+        font-size: 16px;
+    }
+
+    .quiz-option {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .signature-section {
+        margin-top: 80px;
+    }
+}
+
+/* --- 8. SMARTPHONE SANGAT KECIL (Maksimal 320px) --- */
+@media (max-width: 320px) {
+    :root {
+        --sidebar-width: 250px;
+        /* Mengecilkan sidebar agar tidak memakan seluruh layar saat dibuka */
+    }
+
+    .nav-center {
+        display: none;
+        /* Menyembunyikan judul tengah di navbar agar icon tidak menumpuk */
+    }
+
+    .top-navbar {
+        justify-content: space-between;
+    }
+
+    .page-text {
+        font-size: 12px;
+        text-indent: 10px;
+    }
+
+    .member-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .member-name {
+        font-size: 15px;
+    }
+}
+
+/* --- 9. MOBILE LANDSCAPE ORIENTATION (Tinggi Layar Pendek < 500px) --- */
+@media (max-height: 500px) and (orientation: landscape) {
+    :root {
+        --navbar-height: 50px;
+    }
+
+    .book-page:first-of-type,
+    .book-page:last-of-type {
+        padding: 15px;
+    }
+
+    .logo-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .sidebar-header {
+        padding: 15px 15px 5px;
+    }
+
+    /* Memaksimalkan area baca untuk layar yang pendek */
+    .page-content-scroll {
+        height: calc(100vh - 100px);
     }
 }
